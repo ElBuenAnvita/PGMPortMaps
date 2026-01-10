@@ -1,0 +1,359 @@
+<map proto="1.5.0">
+<!-- Created by ElBuenAnvita, built upon work by Cazadorian, _Pear and ElectroidFilms -->
+<version>1.0.0</version>
+<name>Tiki</name>
+<objective>Destroy the enemy teams' egg and eliminate them before they get to yours.</objective>
+<gamemode>bedwars</gamemode>
+<game>EggWars</game>
+<created>2026-01-09</created>
+<respawn auto="true" delay="5s"/>
+<time>50m</time>
+<authors>
+    <author contribution="Original map">MineLC Build Team</author> <!-- Unknown exact players :( -->
+    <author uuid="a0959060-0a7c-40a1-8e3c-ceb2a4a31867" contribution="Layout, XML"/> <!-- ElBuenAnvita -->
+</authors>
+<blitz filter="blitz-conditions" join-filter="joining-filter" scoreboard-filter="blitz-conditions">
+    <lives>1</lives>
+    <broadcastLives>false</broadcastLives>
+</blitz>
+<kits>
+    <kit id="default" reset-ender-pearls="true">
+        <helmet unbreakable="true" team-color="true" locked="true" material="leather helmet"/>
+        <chestplate unbreakable="true" team-color="true" locked="true" material="leather chestplate"/>
+        <leggings unbreakable="true" team-color="true" locked="true" material="leather leggings"/>
+        <boots unbreakable="true" team-color="true" locked="true" material="leather boots"/>
+        <effect duration="4s" amplifier="5">damage_resistance</effect>
+        <!-- <item unbreakable="true" material="wood sword"/> -->
+    </kit>
+	<kit id="fireball" deduct-items="false">
+        <item projectile="throwable-fireball" grenade="true" grenade-power="1.15" material="fireball" name="`rFireball"/>
+    </kit>
+</kits>
+<actions>
+	<action id="sudden-death" expose="true" filter="sudden-death-unstarted" scope="match">
+        <set var="sudden_death_variable" value="1"/>
+    </action>
+	<trigger action="sudden-death" scope="match">
+        <filter>
+            <time>29m</time>
+        </filter>
+    </trigger>
+	<trigger scope="match">
+        <filter>
+            <after message="`cSudden Death `rwill Begin In {0}" duration="60s" filter="sudden-death-counting"/>
+        </filter>
+        <action>
+            <message id="sudden-death-title" fade-in="0.5s" stay="2s" fade-out="0.5s">
+                <title>`cSUDDEN `cDEATH!</title>
+                <subtitle>`fYou `fcan `fno `flonger `frespawn.</subtitle>
+            </message>
+            <set var="sudden_death_variable" value="2"/>
+            <fill region="team-eggs" material="air" events="true"/>
+        </action>
+    </trigger>
+	<message id="destroy-title" fade-in="0.5s" stay="2s" fade-out="0.5s">
+        <title>`cEGG `cDESTROYED!</title>
+        <subtitle>`fYou `fcan `fno `flonger `frespawn.</subtitle>
+    </message>
+	<trigger filter="egg-destroy-message" trigger="destroy-title" scope="player"/>
+</actions>
+<variables>
+	<variable id="sudden_death_variable" scope="match"/>
+</variables>
+<filters>
+    <all id="egg-destroy-message">
+        <filter id="egg-destruction"/>
+        <not>
+            <filter id="sudden-death-enabled"/>
+        </not>
+    </all>
+	<variable id="sudden-death-unstarted" var="sudden_death_variable">0</variable>
+    <variable id="sudden-death-counting" var="sudden_death_variable">1</variable>
+    <variable id="sudden-death-enabled" var="sudden_death_variable">2</variable>
+	<!-- Sudden Death/Monuments Filters -->
+    <any id="blitz-conditions">
+        <!-- Triggers blitz for a team if their egg monument is destroyed in under 30 minutes -->
+        <any id="egg-destruction">
+            <all>
+                <team>team-blue</team>
+                <completed>team-blue-egg-broken</completed>
+            </all>
+            <all>
+                <team>team-purple</team>
+                <completed>team-purple-egg-broken</completed>
+            </all>
+            <all>
+                <team>team-silver</team>
+                <completed>team-silver-egg-broken</completed>
+            </all>
+            <all>
+                <team>team-cyan</team>
+                <completed>team-cyan-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-lime</team>
+                <completed>team-lime-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-red</team>
+                <completed>team-red-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-white</team>
+                <completed>team-white-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-gray</team>
+                <completed>team-gray-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-pink</team>
+                <completed>team-pink-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-yellow</team>
+                <completed>team-yellow-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-green</team>
+                <completed>team-green-egg-broken</completed>
+            </all>
+        </any>
+        <!-- Failsafe to guarantee blitz after 30m sudden death happens -->
+        <time>30m</time>
+    </any>
+	<not id="joining-filter">
+        <any>
+            <completed>team-blue-egg-broken</completed>
+            <completed>team-purple-egg-broken</completed>
+            <completed>team-silver-egg-broken</completed>
+            <completed>team-cyan-egg-broken</completed>
+            <completed>team-lime-egg-broken</completed>
+            <completed>team-red-egg-broken</completed>
+            <completed>team-white-egg-broken</completed>
+            <completed>team-gray-egg-broken</completed>
+			<completed>team-pink-egg-broken</completed>
+			<completed>team-yellow-egg-broken</completed>
+			<completed>team-green-egg-broken</completed>
+        </any>
+    </not>
+	    <not id="team-blue-scoreboard-filter">
+        <completed>team-blue-egg-broken</completed>
+    </not>
+    <not id="team-purple-scoreboard-filter">
+        <completed>team-purple-egg-broken</completed>
+    </not>
+    <not id="team-silver-scoreboard-filter">
+        <completed>team-silver-egg-broken</completed>
+    </not>
+    <not id="team-cyan-scoreboard-filter">
+        <completed>team-cyan-egg-broken</completed>
+    </not>
+	<not id="team-lime-scoreboard-filter">
+        <completed>team-lime-egg-broken</completed>
+    </not>
+	<not id="team-red-scoreboard-filter">
+        <completed>team-red-egg-broken</completed>
+    </not>
+	<not id="team-white-scoreboard-filter">
+        <completed>team-white-egg-broken</completed>
+    </not>
+	<not id="team-gray-scoreboard-filter">
+        <completed>team-gray-egg-broken</completed>
+    </not>
+	<not id="team-pink-scoreboard-filter">
+        <completed>team-pink-egg-broken</completed>
+    </not>
+	<not id="team-yellow-scoreboard-filter">
+        <completed>team-yellow-egg-broken</completed>
+    </not>
+	<not id="team-green-scoreboard-filter">
+        <completed>team-green-egg-broken</completed>
+    </not>
+</filters>
+<shops>
+    <shop id="item-shop" name="Items">
+		<!-- Bloques -->
+        <category id="blocks" name="`aBlocks" material="brick"> 
+            <item material="sandstone" amount="2" price="1" currency="iron ingot" color="white"/> <!-- team-color="true" -->
+            <item material="glass" team-color="true" amount="1" price="1" currency="iron ingot" color="white"/>
+            <item material="glowstone" amount="1" price="2" currency="iron ingot" color="white"/>
+            <item material="obsidian" amount="1" price="10" currency="gold ingot" color="dark green"/>
+        </category>
+		<!-- Armas -->
+        <category id="melee" name="`aMelee" material="gold sword">
+			<item material="wood sword" unbreakable="false" amount="1" price="5" currency="iron ingot"/>
+			<item material="stone sword" unbreakable="false" amount="1" price="32" currency="iron ingot"/>
+			<item material="iron sword" unbreakable="false" amount="1" price="16" currency="gold ingot"/>
+			<item material="diamond sword" unbreakable="false" amount="1" price="12" currency="diamond"/>
+            <item material="stick" name="`r`bKnockback Stick" enchantment="knockback:1" amount="1" price="10" currency="gold ingot"/>
+        </category>
+		<category id="armor" name="`aArmor" material="iron chestplate">
+			<item material="leather helmet" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
+			<item material="leather chestplate" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
+			<item material="leather leggings" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
+			<item material="leather boots" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
+			<item material="chainmail helmet" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
+			<item material="chainmail chestplate" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
+			<item material="chainmail leggings" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
+			<item material="chainmail boots" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
+			<item material="iron helmet" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
+			<item material="iron chestplate" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
+			<item material="iron leggings" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
+			<item material="iron boots" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
+        </category>
+		<category id="food" name="`aFood" material="rabbit stew">
+			<item material="carrot item" amount="1" price="1" currency="iron ingot"/>
+			<item material="cooked beef" amount="1" price="5" currency="iron ingot"/>
+			<item material="cake" amount="1" price="12" currency="iron ingot"/>
+			<item material="golden apple" amount="1" price="2" currency="gold ingot"/>
+			<item material="golden apple" amount="1" price="32" currency="diamond"/>
+        </category>
+        <category id="tools" name="`aTools" material="gold pickaxe">
+            <!-- <item material="shears" name="`r`fPermanent Shears" lore="`7Great for getting rid of wool." unbreakable="true" price="20" currency="iron ingot" filter="not-shears" color="white"/> -->
+            <item material="stone pickaxe" enchantment="efficiency:1" amount="1" price="10" currency="iron ingot" color="white"/>
+			<item material="iron pickaxe" enchantment="efficiency:1" amount="1" price="3" currency="gold ingot" color="white"/>
+			<item material="diamond pickaxe" enchantment="efficiency:1" amount="1" price="10" currency="gold ingot" color="white"/>
+			<item material="diamond pickaxe" enchantment="efficiency:3" amount="1" price="10" currency="diamond" color="white"/>
+        </category>
+        <category id="ranged" name="`aRanged" material="bow">
+            <item material="arrow" amount="5" price="2" currency="gold ingot"/>
+			<item material="bow" amount="1" price="8" currency="diamond"/>
+			<item material="bow" amount="1" enchantment="punch:1" price="12" currency="diamond"/>
+			<item material="bow" amount="1" enchantment="power:1" price="15" currency="diamond"/>
+        </category>
+        <category id="potions" name="`aPotions" material="brewing stand item">
+			<!-- TODO me dio pereza -->
+            <item material="potion" name="`r`fSpeed II (0:45)" damage="2" amount="1" price="1" currency="emerald" color="dark green">
+                <effect duration="45s" amplifier="2">speed</effect>
+            </item>
+            <item material="potion" name="`r`fJump Boost V (0:45)" damage="11" amount="1" price="1" currency="emerald" color="dark green">
+                <effect duration="45s" amplifier="5">jump_boost</effect>
+            </item>
+            <item material="potion" name="`r`fInvisibility (0:30)" damage="14" amount="1" price="2" currency="emerald" color="dark green">
+                <effect duration="30s">invisibility</effect>
+            </item>
+        </category>
+        <category id="utilities" name="`aUtilities" material="tnt">
+			<item material="chest" amount="1" price="1" currency="gold ingot"/>
+			<!-- TODO enderchest??? -->
+			<item material="fireball" name="`r`fFireball" lore="`7Right-click to launch! Great for|`7knocking off enemies walking on|`7thin bridges." price="40" currency="iron ingot" kit="fireball" color="white"/>
+            <item material="tnt" lore="`7Instantly ignites once placed." amount="1" price="5" currency="gold ingot"/>
+            <item material="ender pearl" lore="`7The quickest way to invade enemy bases." amount="1" price="10" currency="diamond" color="dark green"/>
+            <!-- <item material="water bucket" lore="`7Great for slowing down approaching|`7enemies. Can also protect|`7against TNT." amount="1" price="6" currency="gold ingot"/> -->
+            <!-- <item material="sponge" amount="4" price="6" currency="gold ingot"/> -->
+        </category>
+    </shop>
+</shops>
+<!-- ResourceSpawners -->
+<spawners player-region="everywhere">
+    <spawner spawn-region="" max-entities="64" delay="1s">
+        <item amount="1" material="diamond"/>
+    </spawner>
+</spawners>
+<projectiles>
+    <projectile id="throwable-fireball" name="Fireball" projectile="Fireball" click="right" velocity="0.8" damage="4" cooldown="2s"/>
+</projectiles>
+<tnt>
+    <instantignite>on</instantignite>
+    <licensing>false</licensing>
+    <friendly-defuse>false</friendly-defuse>
+    <fuse>3s</fuse>
+    <yield>1</yield>
+    <power>4.0</power>
+</tnt>
+<disabledamage>
+    <damage ally="true" self="false" enemy="false" other="false">block explosion</damage>
+</disabledamage>
+<teams>
+    <team id="team-blue" color="blue" max="2">Blue</team>
+    <team id="team-purple" color="dark_purple" dye-color="magenta" max="2">Purple</team>
+    <team id="team-silver" color="gray" dye-color="silver" max="2">Gray</team>
+    <team id="team-orange" color="gold" dye-color="orange" max="2">Orange</team>
+	<team id="team-cyan" color="dark_aqua" dye-color="cyan" max="2">Cyan</team>
+	<team id="team-lime" color="green" dye-color="lime" max="2">Lime</team>
+	<team id="team-red" color="red" max="2">Red</team>
+	<team id="team-white" color="white" max="2">White</team>
+	<team id="team-gray" color="dark_gray" dye-color="gray" max="2">Black</team>
+	<team id="team-pink" color="light_purple" dye-color="pink" max="2">Pink</team>
+	<team id="team-yellow" color="yellow" dye-color="yellow" max="2">Yellow</team>
+	<team id="team-green" color="dark_green" dye-color="green" max="2">Green</team>
+</teams>
+<spawns>
+    <!-- TODO mejorar yaws -->
+    <spawn team="team-blue" kit="default" region="team-blue-spawn" yaw="-298"/>
+    <spawn team="team-purple" kit="default" region="team-purple-spawn" yaw="-303"/>
+    <spawn team="team-silver" kit="default" region="team-silver-spawn" yaw="90"/>
+	<spawn team="team-orange" kit="default" region="team-orange-spawn" yaw="-308"/>
+    <spawn team="team-cyan" kit="default" region="team-cyan-spawn" yaw="-90"/>
+	<spawn team="team-lime" kit="default" region="team-lime-spawn" yaw="-90"/>
+	<spawn team="team-red" kit="default" region="team-red-spawn" yaw="-90"/>
+	<spawn team="team-white" kit="default" region="team-white-spawn" yaw="-90"/>
+	<spawn team="team-gray" kit="default" region="team-gray-spawn" yaw="-90"/>
+	<spawn team="team-pink" kit="default" region="team-pink-spawn" yaw="-204"/>
+	<spawn team="team-yellow" kit="default" region="team-yellow-spawn" yaw="-218"/>
+	<spawn team="team-green" kit="default" region="team-green-spawn" yaw="-90"/>
+    <default region="obs-spawn"/>
+</spawns>
+<regions>
+    <!-- Spawns -->
+    <point id="team-blue-spawn">67,63,-66.5</point>
+    <point id="team-purple-spawn">23.5,63,-92</point>
+    <point id="team-silver-spawn">-35,63,-92</point>
+	<point id="team-orange-spawn">-78,63,-64</point>
+    <point id="team-cyan-spawn">-102.5,63,-25.5</point>
+	<point id="team-lime-spawn">-104.5,63,32.5</point>
+	<point id="team-red-spawn">-79.5,63,77</point>
+	<point id="team-white-spawn">-40.5,63,101.5</point>
+	<point id="team-gray-spawn">-35.5,63,-92.5</point> <!-- Negro XD -->
+	<point id="team-pink-spawn">61.5,63,78.5</point>
+	<point id="team-yellow-spawn">88.5,63,38.5</point>
+	<point id="team-green-spawn">88,63,-19</point>
+	<point id="obs-spawn">-10.5,143,0</point>
+	<!-- Eggs -->
+	<union id="team-eggs">
+		<block id="team-blue-egg">55,64,-64</block>
+		<block id="team-purple-egg">12,64,-89</block>
+		<block id="team-silver-egg">-46,64,-89</block>
+		<block id="team-cyan-egg">-102,64,-16</block>
+		<block id="team-lime-egg">-102,64,42</block>
+		<block id="team-red-egg">-76,64,87</block>
+		<block id="team-white-egg">-31,64,98</block>
+		<block id="team-gray-egg">27,64,-98</block> <!-- Negro XD -->
+		<block id="team-pink-egg">58,64,68</block>
+		<block id="team-yellow-egg">84,64,26</block>
+		<block id="team-green-egg">84,64,-32</block>
+	</union>
+</regions>
+<!-- TODO check with eggs -->
+<destroyables required="false" repairable="false" show="true" sparks="false" material="obsidian"> <!-- completion="25%" -->
+    <destroyable name="§9Blue" owner="team-blue" region="team-blue-egg" id="team-blue-egg-broken" scoreboard-filter="team-blue-scoreboard-filter"/>
+	<destroyable name="§5Purple" owner="team-purple" region="team-purple-egg" id="team-purple-egg-broken" scoreboard-filter="team-purple-scoreboard-filter"/>
+	<destroyable name="§7Gray" owner="team-silver" region="team-silver-egg" id="team-silver-egg-broken" scoreboard-filter="team-silver-scoreboard-filter"/>
+	<destroyable name="§3Cyan" owner="team-cyan" region="team-cyan-egg" id="team-cyan-egg-broken" scoreboard-filter="team-cyan-scoreboard-filter"/>
+	<destroyable name="§aLime" owner="team-lime" region="team-lime-egg" id="team-lime-egg-broken" scoreboard-filter="team-lime-scoreboard-filter"/>
+	<destroyable name="§cRed" owner="team-red" region="team-red-egg" id="team-red-egg-broken" scoreboard-filter="team-red-scoreboard-filter"/>
+	<destroyable name="§fWhite" owner="team-white" region="team-white-egg" id="team-white-egg-broken" scoreboard-filter="team-white-scoreboard-filter"/>
+	<destroyable name="§8Black" owner="team-gray" region="team-gray-egg" id="team-gray-egg-broken" scoreboard-filter="team-gray-scoreboard-filter"/>
+	<destroyable name="§dPink" owner="team-pink" region="team-pink-egg" id="team-pink-egg-broken" scoreboard-filter="team-pink-scoreboard-filter"/>
+	<destroyable name="§eYellow" owner="team-yellow" region="team-yellow-egg" id="team-yellow-egg-broken" scoreboard-filter="team-yellow-scoreboard-filter"/>
+	<destroyable name="§2Green" owner="team-green" region="team-green-egg" id="team-green-egg-broken" scoreboard-filter="team-green-scoreboard-filter"/>
+</destroyables>
+<shopkeepers>
+    <shopkeepers name="`bShop" shop="item-shop">
+		<shopkeeper yaw="87">69.5,63,-65.5</shopkeeper> <!-- Blue -->
+		<shopkeeper yaw="90">26.5,63,-90.5</shopkeeper> <!-- Purple -->
+		<shopkeeper yaw="90">-31.5,63,-90.5</shopkeeper> <!-- Silver/Gray -->
+		<shopkeeper yaw="90">-74.5,63,-62.5</shopkeeper> <!-- Orange -->
+		<shopkeeper yaw="0">-103.5,63,-29.5</shopkeeper> <!-- Cyan -->
+		<shopkeeper yaw="0">-103.5,63,28.5</shopkeeper> <!-- Lime -->
+		<shopkeeper yaw="0">-77.5,63,73.5</shopkeeper> <!-- Red -->
+        <shopkeeper yaw="263">-44.5,63,100.5</shopkeeper> <!-- White -->
+		<shopkeeper yaw="269">13.5,63,100.5</shopkeeper> <!-- Dark Gray -->
+		<shopkeeper yaw="180">60.5,63,82.5</shopkeeper> <!-- Pink -->
+		<shopkeeper yaw="180">86.5,63,40.5</shopkeeper> <!-- Yellow -->
+		<shopkeeper yaw="180">86.5,63,-17.5</shopkeeper> <!-- Green -->
+    </shopkeepers>
+</shopkeepers>
+<maxbuildheight>131</maxbuildheight>
+</map>
