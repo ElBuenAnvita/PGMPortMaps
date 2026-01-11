@@ -52,17 +52,57 @@
     </message>
 	<trigger filter="egg-destroy-message" trigger="destroy-title" scope="player"/>
 	<!-- sets -->
-	<action id="upg-team-generator-iron-1" scope="player">
-		<message text="El Generador Hierro #1 subió a Nivel 2"/>
+	<action id="upg-team-generator-iron-1-lvl1" scope="player">
+		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 2`7."/>
 		<set var="team_generator_iron_1" value="2" scope="player"/>
 	</action>
-	<action id="upg-team-generator-iron-2" scope="player">
-		<message text="El Generador Hierro #1 subió a Nivel 3"/>
+	<action id="upg-team-generator-iron-1-lvl2" scope="player">
+		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 3`7."/>
 		<set var="team_generator_iron_1" value="3" scope="player"/>
 	</action>
-	<action id="upg-team-generator-iron-3" scope="player">
-		<message text="El Generador Hierro #1 subió a Nivel 4"/>
+	<action id="upg-team-generator-iron-1-lvl3" scope="player">
+		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 4`7."/>
 		<set var="team_generator_iron_1" value="4" scope="player"/>
+	</action>
+	<action id="upg-team-generator-iron-2-lvl1" scope="player">
+		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 2`7."/>
+		<set var="team_generator_iron_2" value="2" scope="player"/>
+	</action>
+	<action id="upg-team-generator-iron-2-lvl2" scope="player">
+		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 3`7."/>
+		<set var="team_generator_iron_2" value="3" scope="player"/>
+	</action>
+	<action id="upg-team-generator-iron-2-lvl3" scope="player">
+		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 4`7."/>
+		<set var="team_generator_iron_2" value="4" scope="player"/>
+	</action>
+	<action id="upg-team-generator-gold-1-lvl1" scope="player">
+		<message text="`7Your team's `6`lGold Generator`7 was upgraded to `fLevel 2`7."/>
+		<set var="team_generator_gold_1" value="2" scope="player"/>
+	</action>
+	<action id="upg-team-generator-gold-1-lvl2" scope="player">
+		<message text="`7Your team's `6`lGold Generator`7 was upgraded to `fLevel 3`7."/>
+		<set var="team_generator_gold_1" value="3" scope="player"/>
+	</action>
+	<action id="upg-team-generator-gold-1-lvl3" scope="player">
+		<message text="`7Your team's `6`lGold Generator`7 was upgraded to `fLevel 4`7."/>
+		<set var="team_generator_gold_1" value="4" scope="player"/>
+	</action>
+	<action id="upg-team-generator-diamond-1-lvl0" scope="player">
+		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 1`7."/>
+		<set var="team_generator_diamond_1" value="1" scope="player"/>
+	</action>
+	<action id="upg-team-generator-diamond-1-lvl1" scope="player">
+		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 2`7."/>
+		<set var="team_generator_diamond_1" value="2" scope="player"/>
+	</action>
+	<action id="upg-team-generator-diamond-1-lvl2" scope="player">
+		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 3`7."/>
+		<set var="team_generator_diamond_1" value="3" scope="player"/>
+	</action>
+	<action id="upg-team-generator-diamond-1-lvl3" scope="player">
+		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 4`7."/>
+		<set var="team_generator_diamond_1" value="4" scope="player"/>
 	</action>
 </actions>
 <variables>
@@ -71,18 +111,23 @@
 	<!-- Team generators -->
 	<variable id="team_generator_iron_1" scope="team" default="1"/>
 	<variable id="team_generator_iron_2" scope="team" default="1"/>
-	<variable id="team_generator_gold_1" scope="team" default="0"/>
+	<variable id="team_generator_gold_1" scope="team" default="1"/>
 	<variable id="team_generator_diamond_1" scope="team" default="0"/>
 	<!-- Global (Middle) generators -->
 	<variable id="global_generator" scope="match" default="1"/>
 </variables>
 <filters>
-	<!-- Resource generator upgrades -->
+	<!-- Resource generator upgrades (global) -->
+	<variable id="global-generator-lv1" var="global_generator">1</variable>
+	<variable id="global-generator-lv2" var="global_generator">2</variable>
+	<variable id="global-generator-lv3" var="global_generator">3</variable>
+	<!-- Resource generator upgrades (teams) -->
 	<!-- Nivel 0 -->
 	<variable id="team-orange-generator-iron-1-lv0" var="team_generator_iron_1" team="team-orange">0</variable>
 	<variable id="team-orange-generator-iron-2-lv0" var="team_generator_iron_2" team="team-orange">0</variable>
 	<variable id="team-orange-generator-gold-1-lv0" var="team_generator_gold_1" team="team-orange">0</variable>
 	<variable id="team-orange-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-orange">0</variable>
+	<!-- aqui deberian ir los lv0 de los otros teams -->
 	<!-- Nivel 1 -->
 	<variable id="team-orange-generator-iron-1-lv1" var="team_generator_iron_1" team="team-orange">1</variable>
 	<variable id="team-orange-generator-iron-2-lv1" var="team_generator_iron_2" team="team-orange">1</variable>
@@ -102,7 +147,6 @@
 	<variable id="team-orange-generator-iron-1-lv4" var="team_generator_iron_1" team="team-orange">4</variable>
 	<variable id="team-orange-generator-iron-2-lv4" var="team_generator_iron_2" team="team-orange">4</variable>
 	<variable id="team-orange-generator-gold-1-lv4" var="team_generator_gold_1" team="team-orange">4</variable>
-	<variable id="team-orange-generator-diamond-1-lv4" var="team_generator_diamond_1" team="team-orange">4</variable>
 	<!-- Upgrade visibility filters -->
 	<variable id="generator-iron-1-lvl1" var="team_generator_iron_1">1</variable>
 	<variable id="generator-iron-1-lvl2" var="team_generator_iron_1">2</variable>
@@ -116,6 +160,7 @@
 	<variable id="generator-gold-1-lvl2" var="team_generator_gold_1">2</variable>
 	<variable id="generator-gold-1-lvl3" var="team_generator_gold_1">3</variable>
 	<variable id="generator-gold-1-lvl4" var="team_generator_gold_1">4</variable>
+	<variable id="generator-diamond-1-lvl0" var="team_generator_diamond_1">0</variable>
 	<variable id="generator-diamond-1-lvl1" var="team_generator_diamond_1">1</variable>
 	<variable id="generator-diamond-1-lvl2" var="team_generator_diamond_1">2</variable>
 	<variable id="generator-diamond-1-lvl3" var="team_generator_diamond_1">3</variable>
@@ -144,6 +189,10 @@
             <all>
                 <team>team-silver</team>
                 <completed>team-silver-egg-broken</completed>
+            </all>
+			<all>
+                <team>team-orange</team>
+                <completed>team-orange-egg-broken</completed>
             </all>
             <all>
                 <team>team-cyan</team>
@@ -186,6 +235,7 @@
             <completed>team-blue-egg-broken</completed>
             <completed>team-purple-egg-broken</completed>
             <completed>team-silver-egg-broken</completed>
+			<completed>team-orange-egg-broken</completed>
             <completed>team-cyan-egg-broken</completed>
             <completed>team-lime-egg-broken</completed>
             <completed>team-red-egg-broken</completed>
@@ -196,7 +246,7 @@
 			<completed>team-green-egg-broken</completed>
         </any>
     </not>
-	    <not id="team-blue-scoreboard-filter">
+	<not id="team-blue-scoreboard-filter">
         <completed>team-blue-egg-broken</completed>
     </not>
     <not id="team-purple-scoreboard-filter">
@@ -204,6 +254,9 @@
     </not>
     <not id="team-silver-scoreboard-filter">
         <completed>team-silver-egg-broken</completed>
+    </not>
+	<not id="team-orange-scoreboard-filter">
+        <completed>team-orange-egg-broken</completed>
     </not>
     <not id="team-cyan-scoreboard-filter">
         <completed>team-cyan-egg-broken</completed>
@@ -295,7 +348,7 @@
         </category>
         <category id="utilities" name="`aUtilities" material="tnt">
 			<item material="chest" amount="1" price="1" currency="gold ingot"/>
-			<!-- TODO enderchest??? -->
+			<!-- Impossible to sell enderchest according to docs (https://pgm.dev/docs/modules/blocks/enderchests) as players cannot place ender chest under any circumstances. -->
 			<item material="fireball" name="`r`fFireball" lore="`7Right-click to launch! Great for|`7knocking off enemies walking on|`7thin bridges." price="40" currency="iron ingot" kit="fireball" color="white"/>
             <item material="tnt" lore="`7Instantly ignites once placed." amount="1" price="5" currency="gold ingot"/>
             <item material="ender pearl" lore="`7The quickest way to invade enemy bases." amount="1" price="10" currency="diamond" color="dark green"/>
@@ -303,9 +356,19 @@
             <!-- <item material="sponge" amount="4" price="6" currency="gold ingot"/> -->
         </category>
 		<category id="upgrades" name="`aUpgrades" material="exp bottle">
-			<item material="iron ingot" name="`b`lIron Spawner #1: II" price="20" currency="iron ingot" action="upg-team-generator-iron-1" filter="generator-iron-1-lvl1" color="aqua"/>
-			<item material="iron ingot" name="`b`lIron Spawner #1: III" price="20" currency="iron ingot" action="upg-team-generator-iron-2" filter="generator-iron-1-lvl2" color="aqua"/>
-			<item material="iron ingot" name="`b`lIron Spawner #1: IV" price="20" currency="iron ingot" action="upg-team-generator-iron-3" filter="generator-iron-1-lvl3" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #1: II" price="20" currency="iron ingot" action="upg-team-generator-iron-1-lvl1" filter="generator-iron-1-lvl1" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #1: III" price="20" currency="gold ingot" action="upg-team-generator-iron-1-lvl2" filter="generator-iron-1-lvl2" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #1: IV" price="50" currency="gold ingot" action="upg-team-generator-iron-1-lvl3" filter="generator-iron-1-lvl3" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #2: II" price="20" currency="iron ingot" action="upg-team-generator-iron-2-lvl1" filter="generator-iron-2-lvl1" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #2: III" price="20" currency="gold ingot" action="upg-team-generator-iron-2-lvl2" filter="generator-iron-2-lvl2" color="aqua"/>
+			<item material="iron ingot" name="`7`lIron Spawner #2: IV" price="50" currency="gold ingot" action="upg-team-generator-iron-2-lvl3" filter="generator-iron-2-lvl3" color="aqua"/>
+			<item material="gold ingot" name="`8`lGold Spawner: II" price="20" currency="gold ingot" action="upg-team-generator-gold-1-lvl1" filter="generator-gold-1-lvl1" color="aqua"/>
+			<item material="gold ingot" name="`8`lGold Spawner: III" price="10" currency="diamond" action="upg-team-generator-gold-1-lvl2" filter="generator-gold-1-lvl2" color="aqua"/>
+			<item material="gold ingot" name="`8`lGold Spawner: IV" price="25" currency="diamond" action="upg-team-generator-gold-1-lvl3" filter="generator-gold-1-lvl3" color="aqua"/>
+			<item material="diamond" name="`b`lDiamond Spawner: I" price="5" currency="diamond" action="upg-team-generator-diamond-1-lvl0" filter="generator-diamond-1-lvl0" color="aqua"/>
+			<item material="diamond" name="`b`lDiamond Spawner: II" price="20" currency="diamond" action="upg-team-generator-diamond-1-lvl1" filter="generator-diamond-1-lvl1" color="aqua"/>
+			<item material="diamond" name="`b`lDiamond Spawner: III" price="10" currency="diamond" action="upg-team-generator-diamond-1-lvl2" filter="generator-diamond-1-lvl2" color="aqua"/>
+			<item material="diamond" name="`b`lDiamond Spawner: IV" price="25" currency="diamond" action="upg-team-generator-diamond-1-lvl3" filter="generator-diamond-1-lvl3" color="aqua"/>
         </category>
     </shop>
 </shops>
@@ -322,6 +385,39 @@
     </spawner>
 	<spawner spawn-region="team-orange-generator-iron-1" delay="0.25s" filter="team-orange-generator-iron-1-lv4">
         <item amount="1" material="iron ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="1s" filter="team-orange-generator-iron-2-lv1">
+        <item amount="1" material="iron ingot"/>
+    </spawner>
+    <spawner spawn-region="team-orange-generator-iron-2" delay="0.75s" filter="team-orange-generator-iron-2-lv2">
+        <item amount="1" material="iron ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="0.5s" filter="team-orange-generator-iron-2-lv3">
+        <item amount="1" material="iron ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="0.25s" filter="team-orange-generator-iron-2-lv4">
+        <item amount="1" material="iron ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="5s" filter="team-orange-generator-gold-1-lv1">
+        <item amount="1" material="gold ingot"/>
+    </spawner>
+    <spawner spawn-region="team-orange-generator-gold-1" delay="3.5s" filter="team-orange-generator-gold-1-lv2">
+        <item amount="1" material="gold ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="2s" filter="team-orange-generator-gold-1-lv3">
+        <item amount="1" material="gold ingot"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="1s" filter="team-orange-generator-gold-1-lv4">
+        <item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-diamond-1" delay="10s" filter="team-orange-generator-diamond-1-lv1">
+        <item amount="1" material="diamond"/>
+    </spawner>
+    <spawner spawn-region="team-orange-generator-diamond-1" delay="5s" filter="team-orange-generator-diamond-1-lv2">
+        <item amount="1" material="diamond"/>
+    </spawner>
+	<spawner spawn-region="team-orange-generator-diamond-1" delay="2.5s" filter="team-orange-generator-diamond-1-lv3">
+        <item amount="1" material="diamond"/>
     </spawner>
 </spawners>
 <projectiles>
@@ -378,7 +474,7 @@
 	<point id="team-lime-spawn">-104.5,63,32.5</point>
 	<point id="team-red-spawn">-79.5,63,77</point>
 	<point id="team-white-spawn">-40.5,63,101.5</point>
-	<point id="team-gray-spawn">-35.5,63,-92.5</point> <!-- Negro XD -->
+	<point id="team-gray-spawn">-35.5,63,-92.5</point> <!-- Negro -->
 	<point id="team-pink-spawn">61.5,63,78.5</point>
 	<point id="team-yellow-spawn">88.5,63,38.5</point>
 	<point id="team-green-spawn">88,63,-19</point>
@@ -388,87 +484,101 @@
 		<block id="team-blue-egg">55,64,-64</block>
 		<block id="team-purple-egg">12,64,-89</block>
 		<block id="team-silver-egg">-46,64,-89</block>
+		<block id="team-orange-egg">-89,64,-61</block>
 		<block id="team-cyan-egg">-102,64,-16</block>
 		<block id="team-lime-egg">-102,64,42</block>
 		<block id="team-red-egg">-76,64,87</block>
 		<block id="team-white-egg">-31,64,98</block>
-		<block id="team-gray-egg">27,64,98</block> <!-- Negro XD -->
+		<block id="team-gray-egg">27,64,98</block> <!-- Negro -->
 		<block id="team-pink-egg">58,64,68</block>
 		<block id="team-yellow-egg">84,64,26</block>
 		<block id="team-green-egg">84,64,-32</block>
 	</union>
 	<union id="generators">
-		<point id="gold1-1">12.5,64.0,111.5</point>
-		<point id="diamond3-1">-10.5,120.0,-0.5</point>
+		<!-- GLOBAL (Middle) generators -->
+		<point id="global-diamond-1">-10.5,120.0,-0.5</point>
+		<point id="global-diamond-2">0.5,59.0,-6.5</point>
+		<point id="global-diamond-3">-14.5,59.0,13.5</point>
+		<point id="global-iron-1">5.5,72.0,1.5</point>
+		<point id="global-iron-2">-29.5,69.0,3.5</point>
+		<point id="global-gold-1">-9.5,60.0,-6.5</point>
+		<point id="global-gold-2">-3.5,59.0,13.5</point>
+		<!-- Blue generators locations -->
+		<point id="team-blue-generator-iron-1">75.5,64.0,-72.5</point>
+		<point id="team-blue-generator-iron-2">64.5,64.0,-72.5</point>
+		<point id="team-blue-generator-gold-1">70.5,64.0,-76.5</point>
+		<point id="team-blue-generator-diamond-1">58.5,69.0,-74.5</point>
+		<!-- Purple generators locations -->
+		<point id="team-purple-generator-iron-1">32.5,64.0,-97.5</point>
+		<point id="team-purple-generator-iron-2">21.5,64.0,-97.5</point>
+		<point id="team-purple-generator-gold-1">27.5,64.0,-101.5</point>
+		<point id="team-purple-generator-diamond-1">15.5,69.0,-99.5</point>
+		<!-- Silver generators locations -->
+		<point id="team-silver-generator-iron-1">-25.5,64.0,-97.5</point>
+		<point id="team-silver-generator-iron-2">-36.5,64.0,-97.5</point>
+		<point id="team-silver-generator-gold-1">-30.5,64.0,-101.5</point>
+		<point id="team-silver-generator-diamond-1">-42.5,69.0,-99.5</point>
+		<!-- Orange generators locations -->
 		<point id="team-orange-generator-iron-1">-68.5,64.0,-69.5</point>
 		<point id="team-orange-generator-iron-2">-79.5,64.0,-69.5</point>
 		<point id="team-orange-generator-gold-1">-73.5,64.0,-73.5</point>
 		<point id="team-orange-generator-diamond-1">-85.5,69.0,-71.5</point>
-		<point id="iron1-2">32.5,64.0,-97.5</point>
-		<point id="diamond-1">15.5,69.0,-99.5</point>
-		<point id="diamond-2">-112.5,69.0,39.5</point>
-		<point id="diamond3-2">0.5,59.0,-6.5</point>
-		<point id="iron1-4">67.5,64.0,77.5</point>
-		<point id="iron1-5">-39.5,64.0,107.5</point>
-		<point id="diamond-3">-33.5,69.0,109.5</point>
-		<point id="iron1-6">-110.5,64.0,22.5</point>
-		<point id="iron1-7">93.5,64.0,35.5</point>
-		<point id="iron1-8">-110.5,64.0,-35.5</point>
-		<point id="diamond-4">69.5,69.0,71.5</point>
-		<point id="gold1-2">-30.5,64.0,-101.5</point>
-		<point id="iron1-9">93.5,64.0,-11.5</point>
-		<point id="iron1-10">-50.5,64.0,107.5</point>
-		<point id="iron3-1">5.5,72.0,1.5</point>
-		<point id="iron1-11">7.5,64.0,107.5</point>
-		<point id="iron1-12">67.5,64.0,88.5</point>
-		<point id="diamond-5">24.5,69.0,109.5</point>
-		<point id="iron3-2">-29.5,69.0,3.5</point>
-		<point id="iron1-13">-84.5,64.0,67.5</point>
-		<point id="diamond-6">-112.5,69.0,-18.5</point>
-		<point id="iron1-14">18.5,64.0,107.5</point>
-		<point id="gold3-1">-9.5,60.0,-6.5</point>
-		<point id="diamond-7">58.5,69.0,-74.5</point>
-		<point id="iron1-15">21.5,64.0,-97.5</point>
-		<point id="diamond-8">-86.5,69.0,84.5</point>
-		<point id="iron1-16">-110.5,64.0,33.5</point>
-		<point id="iron1-17">64.5,64.0,-72.5</point>
-		<point id="diamond3-3">-14.5,59.0,13.5</point>
-		<point id="gold1-4">70.5,64.0,-76.5</point>
-		<point id="gold3-2">-3.5,59.0,13.5</point>
-		<point id="iron1-18">-110.5,64.0,-24.5</point>
-		<point id="iron1-19">75.5,64.0,-72.5</point>
-		<point id="gold1-5">97.5,64.0,41.5</point>
-		<point id="gold1-6">97.5,64.0,-16.5</point>
-		<point id="iron1-20">-36.5,64.0,-97.5</point>
-		<point id="gold1-7">-114.5,64.0,-30.5</point>
-		<point id="iron1-21">-84.5,64.0,78.5</point>
-		<point id="iron1-22">93.5,64.0,46.5</point>
-		<point id="iron1-23">-25.5,64.0,-97.5</point>
-		<point id="gold1-8">71.5,64.0,83.5</point>
-		<point id="gold1-9">-45.5,64.0,111.5</point>
-		<point id="iron1-24">93.5,64.0,-22.5</point>
-		<point id="gold1-10">-114.5,64.0,27.5</point>
-		<point id="diamond-10">95.5,69.0,-28.5</point>
-		<point id="diamond-11">95.5,69.0,29.5</point>
-		<point id="gold1-11">27.5,64.0,-101.5</point>
-		<point id="gold1-12">-88.5,64.0,72.5</point>
-		<point id="diamond-12">-42.5,69.0,-99.5</point>
+		<!-- Cyan generators locations -->
+		<point id="team-cyan-generator-iron-1">-110.5,64.0,-35.5</point>
+		<point id="team-cyan-generator-iron-2">-110.5,64.0,-24.5</point>
+		<point id="team-cyan-generator-gold-1">-114.5,64.0,-30.5</point>
+		<point id="team-cyan-generator-diamond-1">-112.5,69.0,-18.5</point>
+		<!-- Lime generators locations -->
+		<point id="team-lime-generator-iron-1">-110.5,64.0,22.5</point>
+		<point id="team-lime-generator-iron-2">-110.5,64.0,33.5</point>
+		<point id="team-lime-generator-gold-1">-114.5,64.0,27.5</point>
+		<point id="team-lime-generator-diamond-1">-112.5,69.0,39.5</point>
+		<!-- Red generators locations -->
+		<point id="team-red-generator-iron-1">-84.5,64.0,67.5</point>
+		<point id="team-red-generator-iron-2">-84.5,64.0,78.5</point>
+		<point id="team-red-generator-gold-1">-88.5,64.0,72.5</point>
+		<point id="team-red-generator-diamond-1">-86.5,69.0,84.5</point>
+		<!-- White generators locations -->
+		<point id="team-white-generator-iron-1">-50.5,64.0,107.5</point>
+		<point id="team-white-generator-iron-2">-39.5,64.0,107.5</point>
+		<point id="team-white-generator-gold-1">-45.5,64.0,111.5</point>
+		<point id="team-white-generator-diamond-1">-33.5,69.0,109.5</point>
+		<!-- Black generators locations -->
+		<point id="team-black-generator-iron-1">7.5,64.0,107.5</point>
+		<point id="team-black-generator-iron-2">18.5,64.0,107.5</point>
+		<point id="team-black-generator-gold-1">12.5,64.0,111.5</point>
+		<point id="team-black-generator-diamond-1">24.5,69.0,109.5</point>
+		<!-- Pink generators locations -->
+		<point id="team-pink-generator-iron-1">67.5,64.0,88.5</point>
+		<point id="team-pink-generator-iron-2">67.5,64.0,77.5</point>
+		<point id="team-pink-generator-gold-1">71.5,64.0,83.5</point>
+		<point id="team-pink-generator-diamond-1">69.5,69.0,71.5</point>
+		<!-- Yellow generators locations -->
+		<point id="team-yellow-generator-iron-1">93.5,64.0,46.5</point>
+		<point id="team-yellow-generator-iron-2">93.5,64.0,35.5</point>
+		<point id="team-yellow-generator-gold-1">97.5,64.0,41.5</point>
+		<point id="team-yellow-generator-diamond-1">95.5,69.0,29.5</point>
+		<!-- Green generators locations -->
+		<point id="team-green-generator-iron-1">93.5,64.0,-11.5</point>
+		<point id="team-green-generator-iron-2">93.5,64.0,-22.5</point>
+		<point id="team-green-generator-gold-1">97.5,64.0,-16.5</point>
+		<point id="team-green-generator-diamond-1">95.5,69.0,-28.5</point>
 	</union>
-	<!-- Carteles -->
 </regions>
-<!-- TODO check with eggs -->
+<!-- TODO check material with dragon_egg -->
 <destroyables required="false" repairable="false" show="true" sparks="false" material="obsidian"> <!-- completion="25%" -->
-    <destroyable name="§9Blue" owner="team-blue" region="team-blue-egg" id="team-blue-egg-broken" scoreboard-filter="team-blue-scoreboard-filter"/>
-	<destroyable name="§5Purple" owner="team-purple" region="team-purple-egg" id="team-purple-egg-broken" scoreboard-filter="team-purple-scoreboard-filter"/>
-	<destroyable name="§7Gray" owner="team-silver" region="team-silver-egg" id="team-silver-egg-broken" scoreboard-filter="team-silver-scoreboard-filter"/>
-	<destroyable name="§3Cyan" owner="team-cyan" region="team-cyan-egg" id="team-cyan-egg-broken" scoreboard-filter="team-cyan-scoreboard-filter"/>
-	<destroyable name="§aLime" owner="team-lime" region="team-lime-egg" id="team-lime-egg-broken" scoreboard-filter="team-lime-scoreboard-filter"/>
-	<destroyable name="§cRed" owner="team-red" region="team-red-egg" id="team-red-egg-broken" scoreboard-filter="team-red-scoreboard-filter"/>
-	<destroyable name="§fWhite" owner="team-white" region="team-white-egg" id="team-white-egg-broken" scoreboard-filter="team-white-scoreboard-filter"/>
-	<destroyable name="§8Black" owner="team-gray" region="team-gray-egg" id="team-gray-egg-broken" scoreboard-filter="team-gray-scoreboard-filter"/>
-	<destroyable name="§dPink" owner="team-pink" region="team-pink-egg" id="team-pink-egg-broken" scoreboard-filter="team-pink-scoreboard-filter"/>
-	<destroyable name="§eYellow" owner="team-yellow" region="team-yellow-egg" id="team-yellow-egg-broken" scoreboard-filter="team-yellow-scoreboard-filter"/>
-	<destroyable name="§2Green" owner="team-green" region="team-green-egg" id="team-green-egg-broken" scoreboard-filter="team-green-scoreboard-filter"/>
+    <destroyable name="§9Blue §9Egg" owner="team-blue" region="team-blue-egg" id="team-blue-egg-broken" scoreboard-filter="team-blue-scoreboard-filter"/>
+	<destroyable name="§5Purple §5Egg" owner="team-purple" region="team-purple-egg" id="team-purple-egg-broken" scoreboard-filter="team-purple-scoreboard-filter"/>
+	<destroyable name="§7Gray §7Egg" owner="team-silver" region="team-silver-egg" id="team-silver-egg-broken" scoreboard-filter="team-silver-scoreboard-filter"/>
+	<destroyable name="§7Orange §7Egg" owner="team-orange" region="team-orange-egg" id="team-orange-egg-broken" scoreboard-filter="team-orange-scoreboard-filter"/>
+	<destroyable name="§3Cyan §3Egg" owner="team-cyan" region="team-cyan-egg" id="team-cyan-egg-broken" scoreboard-filter="team-cyan-scoreboard-filter"/>
+	<destroyable name="§aLime §3Egg" owner="team-lime" region="team-lime-egg" id="team-lime-egg-broken" scoreboard-filter="team-lime-scoreboard-filter"/>
+	<destroyable name="§cRed §cEgg" owner="team-red" region="team-red-egg" id="team-red-egg-broken" scoreboard-filter="team-red-scoreboard-filter"/>
+	<destroyable name="§fWhite §fEgg" owner="team-white" region="team-white-egg" id="team-white-egg-broken" scoreboard-filter="team-white-scoreboard-filter"/>
+	<destroyable name="§8Black §8Egg" owner="team-gray" region="team-gray-egg" id="team-gray-egg-broken" scoreboard-filter="team-gray-scoreboard-filter"/>
+	<destroyable name="§dPink §dEgg" owner="team-pink" region="team-pink-egg" id="team-pink-egg-broken" scoreboard-filter="team-pink-scoreboard-filter"/>
+	<destroyable name="§eYellow §eEgg" owner="team-yellow" region="team-yellow-egg" id="team-yellow-egg-broken" scoreboard-filter="team-yellow-scoreboard-filter"/>
+	<destroyable name="§2Green §2Egg" owner="team-green" region="team-green-egg" id="team-green-egg-broken" scoreboard-filter="team-green-scoreboard-filter"/>
 </destroyables>
 <shopkeepers>
     <shopkeepers name="`bShop" shop="item-shop">
