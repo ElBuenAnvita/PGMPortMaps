@@ -53,27 +53,27 @@
 	<trigger filter="egg-destroy-message" trigger="destroy-title" scope="player"/>
 	<!-- sets -->
 	<action id="upg-team-generator-iron-1-lvl1" scope="player">
-		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 2`7."/>
+		<message text="`7Your team's `f`lIron Generator #1`7 was upgraded to `fLevel 2`7."/>
 		<set var="team_generator_iron_1" value="2" scope="player"/>
 	</action>
 	<action id="upg-team-generator-iron-1-lvl2" scope="player">
-		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 3`7."/>
+		<message text="`7Your team's `f`lIron Generator #1`7 was upgraded to `fLevel 3`7."/>
 		<set var="team_generator_iron_1" value="3" scope="player"/>
 	</action>
 	<action id="upg-team-generator-iron-1-lvl3" scope="player">
-		<message text="`7Your team's `lIron Generator #1`7 was upgraded to `fLevel 4`7."/>
+		<message text="`7Your team's `f`lIron Generator #1`7 was upgraded to `fLevel 4`7."/>
 		<set var="team_generator_iron_1" value="4" scope="player"/>
 	</action>
 	<action id="upg-team-generator-iron-2-lvl1" scope="player">
-		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 2`7."/>
+		<message text="`7Your team's `f`lIron Generator #2`7 was upgraded to `fLevel 2`7."/>
 		<set var="team_generator_iron_2" value="2" scope="player"/>
 	</action>
 	<action id="upg-team-generator-iron-2-lvl2" scope="player">
-		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 3`7."/>
+		<message text="`7Your team's `f`lIron Generator #2`7 was upgraded to `fLevel 3`7."/>
 		<set var="team_generator_iron_2" value="3" scope="player"/>
 	</action>
 	<action id="upg-team-generator-iron-2-lvl3" scope="player">
-		<message text="`7Your team's `lIron Generator #2`7 was upgraded to `fLevel 4`7."/>
+		<message text="`7Your team's `f`lIron Generator #2`7 was upgraded to `fLevel 4`7."/>
 		<set var="team_generator_iron_2" value="4" scope="player"/>
 	</action>
 	<action id="upg-team-generator-gold-1-lvl1" scope="player">
@@ -100,10 +100,6 @@
 		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 3`7."/>
 		<set var="team_generator_diamond_1" value="3" scope="player"/>
 	</action>
-	<action id="upg-team-generator-diamond-1-lvl3" scope="player">
-		<message text="`7Your team's `b`lDiamond Generator`7 was upgraded to `fLevel 4`7."/>
-		<set var="team_generator_diamond_1" value="4" scope="player"/>
-	</action>
 </actions>
 <variables>
 	<variable id="sudden_death_variable" scope="match"/>
@@ -123,30 +119,239 @@
 	<variable id="global-generator-lv3" var="global_generator">3</variable>
 	<!-- Resource generator upgrades (teams) -->
 	<!-- Nivel 0 -->
+	<variable id="team-gray-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-gray">0</variable>
+	<variable id="team-gray-generator-gold-1-lv0" var="team_generator_gold_1" team="team-gray">0</variable>
+	<variable id="team-gray-generator-iron-1-lv0" var="team_generator_iron_1" team="team-gray">0</variable>
+	<variable id="team-gray-generator-iron-2-lv0" var="team_generator_iron_2" team="team-gray">0</variable>
+	<variable id="team-blue-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-blue">0</variable>
+	<variable id="team-blue-generator-gold-1-lv0" var="team_generator_gold_1" team="team-blue">0</variable>
+	<variable id="team-blue-generator-iron-1-lv0" var="team_generator_iron_1" team="team-blue">0</variable>
+	<variable id="team-blue-generator-iron-2-lv0" var="team_generator_iron_2" team="team-blue">0</variable>
+	<variable id="team-cyan-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-cyan">0</variable>
+	<variable id="team-cyan-generator-gold-1-lv0" var="team_generator_gold_1" team="team-cyan">0</variable>
+	<variable id="team-cyan-generator-iron-1-lv0" var="team_generator_iron_1" team="team-cyan">0</variable>
+	<variable id="team-cyan-generator-iron-2-lv0" var="team_generator_iron_2" team="team-cyan">0</variable>
+	<variable id="team-green-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-green">0</variable>
+	<variable id="team-green-generator-gold-1-lv0" var="team_generator_gold_1" team="team-green">0</variable>
+	<variable id="team-green-generator-iron-1-lv0" var="team_generator_iron_1" team="team-green">0</variable>
+	<variable id="team-green-generator-iron-2-lv0" var="team_generator_iron_2" team="team-green">0</variable>
+	<variable id="team-lime-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-lime">0</variable>
+	<variable id="team-lime-generator-gold-1-lv0" var="team_generator_gold_1" team="team-lime">0</variable>
+	<variable id="team-lime-generator-iron-1-lv0" var="team_generator_iron_1" team="team-lime">0</variable>
+	<variable id="team-lime-generator-iron-2-lv0" var="team_generator_iron_2" team="team-lime">0</variable>
+	<variable id="team-orange-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-orange">0</variable>
+	<variable id="team-orange-generator-gold-1-lv0" var="team_generator_gold_1" team="team-orange">0</variable>
 	<variable id="team-orange-generator-iron-1-lv0" var="team_generator_iron_1" team="team-orange">0</variable>
 	<variable id="team-orange-generator-iron-2-lv0" var="team_generator_iron_2" team="team-orange">0</variable>
-	<variable id="team-orange-generator-gold-1-lv0" var="team_generator_gold_1" team="team-orange">0</variable>
-	<variable id="team-orange-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-orange">0</variable>
+	<variable id="team-pink-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-pink">0</variable>
+	<variable id="team-pink-generator-gold-1-lv0" var="team_generator_gold_1" team="team-pink">0</variable>
+	<variable id="team-pink-generator-iron-1-lv0" var="team_generator_iron_1" team="team-pink">0</variable>
+	<variable id="team-pink-generator-iron-2-lv0" var="team_generator_iron_2" team="team-pink">0</variable>
+	<variable id="team-purple-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-purple">0</variable>
+	<variable id="team-purple-generator-gold-1-lv0" var="team_generator_gold_1" team="team-purple">0</variable>
+	<variable id="team-purple-generator-iron-1-lv0" var="team_generator_iron_1" team="team-purple">0</variable>
+	<variable id="team-purple-generator-iron-2-lv0" var="team_generator_iron_2" team="team-purple">0</variable>
+	<variable id="team-red-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-red">0</variable>
+	<variable id="team-red-generator-gold-1-lv0" var="team_generator_gold_1" team="team-red">0</variable>
+	<variable id="team-red-generator-iron-1-lv0" var="team_generator_iron_1" team="team-red">0</variable>
+	<variable id="team-red-generator-iron-2-lv0" var="team_generator_iron_2" team="team-red">0</variable>
+	<variable id="team-silver-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-silver">0</variable>
+	<variable id="team-silver-generator-gold-1-lv0" var="team_generator_gold_1" team="team-silver">0</variable>
+	<variable id="team-silver-generator-iron-1-lv0" var="team_generator_iron_1" team="team-silver">0</variable>
+	<variable id="team-silver-generator-iron-2-lv0" var="team_generator_iron_2" team="team-silver">0</variable>
+	<variable id="team-white-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-white">0</variable>
+	<variable id="team-white-generator-gold-1-lv0" var="team_generator_gold_1" team="team-white">0</variable>
+	<variable id="team-white-generator-iron-1-lv0" var="team_generator_iron_1" team="team-white">0</variable>
+	<variable id="team-white-generator-iron-2-lv0" var="team_generator_iron_2" team="team-white">0</variable>
+	<variable id="team-yellow-generator-diamond-1-lv0" var="team_generator_diamond_1" team="team-yellow">0</variable>
+	<variable id="team-yellow-generator-gold-1-lv0" var="team_generator_gold_1" team="team-yellow">0</variable>
+	<variable id="team-yellow-generator-iron-1-lv0" var="team_generator_iron_1" team="team-yellow">0</variable>
+	<variable id="team-yellow-generator-iron-2-lv0" var="team_generator_iron_2" team="team-yellow">0</variable>
 	<!-- aqui deberian ir los lv0 de los otros teams -->
 	<!-- Nivel 1 -->
+	<variable id="team-gray-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-gray">1</variable>
+	<variable id="team-gray-generator-gold-1-lv1" var="team_generator_gold_1" team="team-gray">1</variable>
+	<variable id="team-gray-generator-iron-1-lv1" var="team_generator_iron_1" team="team-gray">1</variable>
+	<variable id="team-gray-generator-iron-2-lv1" var="team_generator_iron_2" team="team-gray">1</variable>
+	<variable id="team-blue-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-blue">1</variable>
+	<variable id="team-blue-generator-gold-1-lv1" var="team_generator_gold_1" team="team-blue">1</variable>
+	<variable id="team-blue-generator-iron-1-lv1" var="team_generator_iron_1" team="team-blue">1</variable>
+	<variable id="team-blue-generator-iron-2-lv1" var="team_generator_iron_2" team="team-blue">1</variable>
+	<variable id="team-cyan-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-cyan">1</variable>
+	<variable id="team-cyan-generator-gold-1-lv1" var="team_generator_gold_1" team="team-cyan">1</variable>
+	<variable id="team-cyan-generator-iron-1-lv1" var="team_generator_iron_1" team="team-cyan">1</variable>
+	<variable id="team-cyan-generator-iron-2-lv1" var="team_generator_iron_2" team="team-cyan">1</variable>
+	<variable id="team-green-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-green">1</variable>
+	<variable id="team-green-generator-gold-1-lv1" var="team_generator_gold_1" team="team-green">1</variable>
+	<variable id="team-green-generator-iron-1-lv1" var="team_generator_iron_1" team="team-green">1</variable>
+	<variable id="team-green-generator-iron-2-lv1" var="team_generator_iron_2" team="team-green">1</variable>
+	<variable id="team-lime-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-lime">1</variable>
+	<variable id="team-lime-generator-gold-1-lv1" var="team_generator_gold_1" team="team-lime">1</variable>
+	<variable id="team-lime-generator-iron-1-lv1" var="team_generator_iron_1" team="team-lime">1</variable>
+	<variable id="team-lime-generator-iron-2-lv1" var="team_generator_iron_2" team="team-lime">1</variable>
+	<variable id="team-orange-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-orange">1</variable>
+	<variable id="team-orange-generator-gold-1-lv1" var="team_generator_gold_1" team="team-orange">1</variable>
 	<variable id="team-orange-generator-iron-1-lv1" var="team_generator_iron_1" team="team-orange">1</variable>
 	<variable id="team-orange-generator-iron-2-lv1" var="team_generator_iron_2" team="team-orange">1</variable>
-	<variable id="team-orange-generator-gold-1-lv1" var="team_generator_gold_1" team="team-orange">1</variable>
-	<variable id="team-orange-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-orange">1</variable>
+	<variable id="team-pink-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-pink">1</variable>
+	<variable id="team-pink-generator-gold-1-lv1" var="team_generator_gold_1" team="team-pink">1</variable>
+	<variable id="team-pink-generator-iron-1-lv1" var="team_generator_iron_1" team="team-pink">1</variable>
+	<variable id="team-pink-generator-iron-2-lv1" var="team_generator_iron_2" team="team-pink">1</variable>
+	<variable id="team-purple-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-purple">1</variable>
+	<variable id="team-purple-generator-gold-1-lv1" var="team_generator_gold_1" team="team-purple">1</variable>
+	<variable id="team-purple-generator-iron-1-lv1" var="team_generator_iron_1" team="team-purple">1</variable>
+	<variable id="team-purple-generator-iron-2-lv1" var="team_generator_iron_2" team="team-purple">1</variable>
+	<variable id="team-red-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-red">1</variable>
+	<variable id="team-red-generator-gold-1-lv1" var="team_generator_gold_1" team="team-red">1</variable>
+	<variable id="team-red-generator-iron-1-lv1" var="team_generator_iron_1" team="team-red">1</variable>
+	<variable id="team-red-generator-iron-2-lv1" var="team_generator_iron_2" team="team-red">1</variable>
+	<variable id="team-silver-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-silver">1</variable>
+	<variable id="team-silver-generator-gold-1-lv1" var="team_generator_gold_1" team="team-silver">1</variable>
+	<variable id="team-silver-generator-iron-1-lv1" var="team_generator_iron_1" team="team-silver">1</variable>
+	<variable id="team-silver-generator-iron-2-lv1" var="team_generator_iron_2" team="team-silver">1</variable>
+	<variable id="team-white-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-white">1</variable>
+	<variable id="team-white-generator-gold-1-lv1" var="team_generator_gold_1" team="team-white">1</variable>
+	<variable id="team-white-generator-iron-1-lv1" var="team_generator_iron_1" team="team-white">1</variable>
+	<variable id="team-white-generator-iron-2-lv1" var="team_generator_iron_2" team="team-white">1</variable>
+	<variable id="team-yellow-generator-diamond-1-lv1" var="team_generator_diamond_1" team="team-yellow">1</variable>
+	<variable id="team-yellow-generator-gold-1-lv1" var="team_generator_gold_1" team="team-yellow">1</variable>
+	<variable id="team-yellow-generator-iron-1-lv1" var="team_generator_iron_1" team="team-yellow">1</variable>
+	<variable id="team-yellow-generator-iron-2-lv1" var="team_generator_iron_2" team="team-yellow">1</variable>
 	<!-- Nivel 2 -->
+	<variable id="team-gray-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-gray">2</variable>
+	<variable id="team-gray-generator-gold-1-lv2" var="team_generator_gold_1" team="team-gray">2</variable>
+	<variable id="team-gray-generator-iron-1-lv2" var="team_generator_iron_1" team="team-gray">2</variable>
+	<variable id="team-gray-generator-iron-2-lv2" var="team_generator_iron_2" team="team-gray">2</variable>
+	<variable id="team-blue-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-blue">2</variable>
+	<variable id="team-blue-generator-gold-1-lv2" var="team_generator_gold_1" team="team-blue">2</variable>
+	<variable id="team-blue-generator-iron-1-lv2" var="team_generator_iron_1" team="team-blue">2</variable>
+	<variable id="team-blue-generator-iron-2-lv2" var="team_generator_iron_2" team="team-blue">2</variable>
+	<variable id="team-cyan-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-cyan">2</variable>
+	<variable id="team-cyan-generator-gold-1-lv2" var="team_generator_gold_1" team="team-cyan">2</variable>
+	<variable id="team-cyan-generator-iron-1-lv2" var="team_generator_iron_1" team="team-cyan">2</variable>
+	<variable id="team-cyan-generator-iron-2-lv2" var="team_generator_iron_2" team="team-cyan">2</variable>
+	<variable id="team-green-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-green">2</variable>
+	<variable id="team-green-generator-gold-1-lv2" var="team_generator_gold_1" team="team-green">2</variable>
+	<variable id="team-green-generator-iron-1-lv2" var="team_generator_iron_1" team="team-green">2</variable>
+	<variable id="team-green-generator-iron-2-lv2" var="team_generator_iron_2" team="team-green">2</variable>
+	<variable id="team-lime-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-lime">2</variable>
+	<variable id="team-lime-generator-gold-1-lv2" var="team_generator_gold_1" team="team-lime">2</variable>
+	<variable id="team-lime-generator-iron-1-lv2" var="team_generator_iron_1" team="team-lime">2</variable>
+	<variable id="team-lime-generator-iron-2-lv2" var="team_generator_iron_2" team="team-lime">2</variable>
+	<variable id="team-orange-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-orange">2</variable>
+	<variable id="team-orange-generator-gold-1-lv2" var="team_generator_gold_1" team="team-orange">2</variable>
 	<variable id="team-orange-generator-iron-1-lv2" var="team_generator_iron_1" team="team-orange">2</variable>
 	<variable id="team-orange-generator-iron-2-lv2" var="team_generator_iron_2" team="team-orange">2</variable>
-	<variable id="team-orange-generator-gold-1-lv2" var="team_generator_gold_1" team="team-orange">2</variable>
-	<variable id="team-orange-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-orange">2</variable>
+	<variable id="team-pink-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-pink">2</variable>
+	<variable id="team-pink-generator-gold-1-lv2" var="team_generator_gold_1" team="team-pink">2</variable>
+	<variable id="team-pink-generator-iron-1-lv2" var="team_generator_iron_1" team="team-pink">2</variable>
+	<variable id="team-pink-generator-iron-2-lv2" var="team_generator_iron_2" team="team-pink">2</variable>
+	<variable id="team-purple-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-purple">2</variable>
+	<variable id="team-purple-generator-gold-1-lv2" var="team_generator_gold_1" team="team-purple">2</variable>
+	<variable id="team-purple-generator-iron-1-lv2" var="team_generator_iron_1" team="team-purple">2</variable>
+	<variable id="team-purple-generator-iron-2-lv2" var="team_generator_iron_2" team="team-purple">2</variable>
+	<variable id="team-red-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-red">2</variable>
+	<variable id="team-red-generator-gold-1-lv2" var="team_generator_gold_1" team="team-red">2</variable>
+	<variable id="team-red-generator-iron-1-lv2" var="team_generator_iron_1" team="team-red">2</variable>
+	<variable id="team-red-generator-iron-2-lv2" var="team_generator_iron_2" team="team-red">2</variable>
+	<variable id="team-silver-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-silver">2</variable>
+	<variable id="team-silver-generator-gold-1-lv2" var="team_generator_gold_1" team="team-silver">2</variable>
+	<variable id="team-silver-generator-iron-1-lv2" var="team_generator_iron_1" team="team-silver">2</variable>
+	<variable id="team-silver-generator-iron-2-lv2" var="team_generator_iron_2" team="team-silver">2</variable>
+	<variable id="team-white-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-white">2</variable>
+	<variable id="team-white-generator-gold-1-lv2" var="team_generator_gold_1" team="team-white">2</variable>
+	<variable id="team-white-generator-iron-1-lv2" var="team_generator_iron_1" team="team-white">2</variable>
+	<variable id="team-white-generator-iron-2-lv2" var="team_generator_iron_2" team="team-white">2</variable>
+	<variable id="team-yellow-generator-diamond-1-lv2" var="team_generator_diamond_1" team="team-yellow">2</variable>
+	<variable id="team-yellow-generator-gold-1-lv2" var="team_generator_gold_1" team="team-yellow">2</variable>
+	<variable id="team-yellow-generator-iron-1-lv2" var="team_generator_iron_1" team="team-yellow">2</variable>
+	<variable id="team-yellow-generator-iron-2-lv2" var="team_generator_iron_2" team="team-yellow">2</variable>
 	<!-- Nivel 3 -->
+	<variable id="team-gray-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-gray">3</variable>
+	<variable id="team-gray-generator-gold-1-lv3" var="team_generator_gold_1" team="team-gray">3</variable>
+	<variable id="team-gray-generator-iron-1-lv3" var="team_generator_iron_1" team="team-gray">3</variable>
+	<variable id="team-gray-generator-iron-2-lv3" var="team_generator_iron_2" team="team-gray">3</variable>
+	<variable id="team-blue-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-blue">3</variable>
+	<variable id="team-blue-generator-gold-1-lv3" var="team_generator_gold_1" team="team-blue">3</variable>
+	<variable id="team-blue-generator-iron-1-lv3" var="team_generator_iron_1" team="team-blue">3</variable>
+	<variable id="team-blue-generator-iron-2-lv3" var="team_generator_iron_2" team="team-blue">3</variable>
+	<variable id="team-cyan-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-cyan">3</variable>
+	<variable id="team-cyan-generator-gold-1-lv3" var="team_generator_gold_1" team="team-cyan">3</variable>
+	<variable id="team-cyan-generator-iron-1-lv3" var="team_generator_iron_1" team="team-cyan">3</variable>
+	<variable id="team-cyan-generator-iron-2-lv3" var="team_generator_iron_2" team="team-cyan">3</variable>
+	<variable id="team-green-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-green">3</variable>
+	<variable id="team-green-generator-gold-1-lv3" var="team_generator_gold_1" team="team-green">3</variable>
+	<variable id="team-green-generator-iron-1-lv3" var="team_generator_iron_1" team="team-green">3</variable>
+	<variable id="team-green-generator-iron-2-lv3" var="team_generator_iron_2" team="team-green">3</variable>
+	<variable id="team-lime-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-lime">3</variable>
+	<variable id="team-lime-generator-gold-1-lv3" var="team_generator_gold_1" team="team-lime">3</variable>
+	<variable id="team-lime-generator-iron-1-lv3" var="team_generator_iron_1" team="team-lime">3</variable>
+	<variable id="team-lime-generator-iron-2-lv3" var="team_generator_iron_2" team="team-lime">3</variable>
+	<variable id="team-orange-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-orange">3</variable>
+	<variable id="team-orange-generator-gold-1-lv3" var="team_generator_gold_1" team="team-orange">3</variable>
 	<variable id="team-orange-generator-iron-1-lv3" var="team_generator_iron_1" team="team-orange">3</variable>
 	<variable id="team-orange-generator-iron-2-lv3" var="team_generator_iron_2" team="team-orange">3</variable>
-	<variable id="team-orange-generator-gold-1-lv3" var="team_generator_gold_1" team="team-orange">3</variable>
-	<variable id="team-orange-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-orange">3</variable>
+	<variable id="team-pink-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-pink">3</variable>
+	<variable id="team-pink-generator-gold-1-lv3" var="team_generator_gold_1" team="team-pink">3</variable>
+	<variable id="team-pink-generator-iron-1-lv3" var="team_generator_iron_1" team="team-pink">3</variable>
+	<variable id="team-pink-generator-iron-2-lv3" var="team_generator_iron_2" team="team-pink">3</variable>
+	<variable id="team-purple-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-purple">3</variable>
+	<variable id="team-purple-generator-gold-1-lv3" var="team_generator_gold_1" team="team-purple">3</variable>
+	<variable id="team-purple-generator-iron-1-lv3" var="team_generator_iron_1" team="team-purple">3</variable>
+	<variable id="team-purple-generator-iron-2-lv3" var="team_generator_iron_2" team="team-purple">3</variable>
+	<variable id="team-red-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-red">3</variable>
+	<variable id="team-red-generator-gold-1-lv3" var="team_generator_gold_1" team="team-red">3</variable>
+	<variable id="team-red-generator-iron-1-lv3" var="team_generator_iron_1" team="team-red">3</variable>
+	<variable id="team-red-generator-iron-2-lv3" var="team_generator_iron_2" team="team-red">3</variable>
+	<variable id="team-silver-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-silver">3</variable>
+	<variable id="team-silver-generator-gold-1-lv3" var="team_generator_gold_1" team="team-silver">3</variable>
+	<variable id="team-silver-generator-iron-1-lv3" var="team_generator_iron_1" team="team-silver">3</variable>
+	<variable id="team-silver-generator-iron-2-lv3" var="team_generator_iron_2" team="team-silver">3</variable>
+	<variable id="team-white-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-white">3</variable>
+	<variable id="team-white-generator-gold-1-lv3" var="team_generator_gold_1" team="team-white">3</variable>
+	<variable id="team-white-generator-iron-1-lv3" var="team_generator_iron_1" team="team-white">3</variable>
+	<variable id="team-white-generator-iron-2-lv3" var="team_generator_iron_2" team="team-white">3</variable>
+	<variable id="team-yellow-generator-diamond-1-lv3" var="team_generator_diamond_1" team="team-yellow">3</variable>
+	<variable id="team-yellow-generator-gold-1-lv3" var="team_generator_gold_1" team="team-yellow">3</variable>
+	<variable id="team-yellow-generator-iron-1-lv3" var="team_generator_iron_1" team="team-yellow">3</variable>
+	<variable id="team-yellow-generator-iron-2-lv3" var="team_generator_iron_2" team="team-yellow">3</variable>
 	<!-- Nivel 4 -->
+	<variable id="team-gray-generator-gold-1-lv4" var="team_generator_gold_1" team="team-gray">4</variable>
+	<variable id="team-gray-generator-iron-1-lv4" var="team_generator_iron_1" team="team-gray">4</variable>
+	<variable id="team-gray-generator-iron-2-lv4" var="team_generator_iron_2" team="team-gray">4</variable>
+	<variable id="team-blue-generator-gold-1-lv4" var="team_generator_gold_1" team="team-blue">4</variable>
+	<variable id="team-blue-generator-iron-1-lv4" var="team_generator_iron_1" team="team-blue">4</variable>
+	<variable id="team-blue-generator-iron-2-lv4" var="team_generator_iron_2" team="team-blue">4</variable>
+	<variable id="team-cyan-generator-gold-1-lv4" var="team_generator_gold_1" team="team-cyan">4</variable>
+	<variable id="team-cyan-generator-iron-1-lv4" var="team_generator_iron_1" team="team-cyan">4</variable>
+	<variable id="team-cyan-generator-iron-2-lv4" var="team_generator_iron_2" team="team-cyan">4</variable>
+	<variable id="team-green-generator-gold-1-lv4" var="team_generator_gold_1" team="team-green">4</variable>
+	<variable id="team-green-generator-iron-1-lv4" var="team_generator_iron_1" team="team-green">4</variable>
+	<variable id="team-green-generator-iron-2-lv4" var="team_generator_iron_2" team="team-green">4</variable>
+	<variable id="team-lime-generator-gold-1-lv4" var="team_generator_gold_1" team="team-lime">4</variable>
+	<variable id="team-lime-generator-iron-1-lv4" var="team_generator_iron_1" team="team-lime">4</variable>
+	<variable id="team-lime-generator-iron-2-lv4" var="team_generator_iron_2" team="team-lime">4</variable>
+	<variable id="team-orange-generator-gold-1-lv4" var="team_generator_gold_1" team="team-orange">4</variable>
 	<variable id="team-orange-generator-iron-1-lv4" var="team_generator_iron_1" team="team-orange">4</variable>
 	<variable id="team-orange-generator-iron-2-lv4" var="team_generator_iron_2" team="team-orange">4</variable>
-	<variable id="team-orange-generator-gold-1-lv4" var="team_generator_gold_1" team="team-orange">4</variable>
+	<variable id="team-pink-generator-gold-1-lv4" var="team_generator_gold_1" team="team-pink">4</variable>
+	<variable id="team-pink-generator-iron-1-lv4" var="team_generator_iron_1" team="team-pink">4</variable>
+	<variable id="team-pink-generator-iron-2-lv4" var="team_generator_iron_2" team="team-pink">4</variable>
+	<variable id="team-purple-generator-gold-1-lv4" var="team_generator_gold_1" team="team-purple">4</variable>
+	<variable id="team-purple-generator-iron-1-lv4" var="team_generator_iron_1" team="team-purple">4</variable>
+	<variable id="team-purple-generator-iron-2-lv4" var="team_generator_iron_2" team="team-purple">4</variable>
+	<variable id="team-red-generator-gold-1-lv4" var="team_generator_gold_1" team="team-red">4</variable>
+	<variable id="team-red-generator-iron-1-lv4" var="team_generator_iron_1" team="team-red">4</variable>
+	<variable id="team-red-generator-iron-2-lv4" var="team_generator_iron_2" team="team-red">4</variable>
+	<variable id="team-silver-generator-gold-1-lv4" var="team_generator_gold_1" team="team-silver">4</variable>
+	<variable id="team-silver-generator-iron-1-lv4" var="team_generator_iron_1" team="team-silver">4</variable>
+	<variable id="team-silver-generator-iron-2-lv4" var="team_generator_iron_2" team="team-silver">4</variable>
+	<variable id="team-white-generator-gold-1-lv4" var="team_generator_gold_1" team="team-white">4</variable>
+	<variable id="team-white-generator-iron-1-lv4" var="team_generator_iron_1" team="team-white">4</variable>
+	<variable id="team-white-generator-iron-2-lv4" var="team_generator_iron_2" team="team-white">4</variable>
+	<variable id="team-yellow-generator-gold-1-lv4" var="team_generator_gold_1" team="team-yellow">4</variable>
+	<variable id="team-yellow-generator-iron-1-lv4" var="team_generator_iron_1" team="team-yellow">4</variable>
+	<variable id="team-yellow-generator-iron-2-lv4" var="team_generator_iron_2" team="team-yellow">4</variable>
 	<!-- Upgrade visibility filters -->
 	<variable id="generator-iron-1-lvl1" var="team_generator_iron_1">1</variable>
 	<variable id="generator-iron-1-lvl2" var="team_generator_iron_1">2</variable>
@@ -288,51 +493,51 @@
 		<!-- Bloques -->
         <category id="blocks" name="`aBlocks" material="brick"> 
             <item material="sandstone" amount="2" price="1" currency="iron ingot" color="white"/> <!-- team-color="true" -->
-            <item material="glass" team-color="true" amount="1" price="1" currency="iron ingot" color="white"/>
+            <item material="stained glass" team-color="true" amount="1" price="1" currency="iron ingot" color="white"/>
             <item material="glowstone" amount="1" price="2" currency="iron ingot" color="white"/>
-            <item material="obsidian" amount="1" price="10" currency="gold ingot" color="dark green"/>
+            <item material="obsidian" amount="1" price="10" currency="gold ingot" color="gold"/>
         </category>
 		<!-- Armas -->
         <category id="melee" name="`aMelee" material="gold sword">
-			<item material="wood sword" unbreakable="false" amount="1" price="5" currency="iron ingot"/>
-			<item material="stone sword" unbreakable="false" amount="1" price="32" currency="iron ingot"/>
-			<item material="iron sword" unbreakable="false" amount="1" price="16" currency="gold ingot"/>
-			<item material="diamond sword" unbreakable="false" amount="1" price="12" currency="diamond"/>
-            <item material="stick" name="`r`bKnockback Stick" enchantment="knockback:1" amount="1" price="10" currency="gold ingot"/>
+			<item material="wood sword" unbreakable="false" amount="1" price="5" currency="iron ingot" color="white"/>
+			<item material="stone sword" unbreakable="false" amount="1" price="32" currency="iron ingot" color="white"/>
+			<item material="iron sword" unbreakable="false" amount="1" price="16" currency="gold ingot" color="gold"/>
+			<item material="diamond sword" unbreakable="false" amount="1" price="12" currency="diamond" color="aqua"/>
+            <item material="stick" name="`r`bKnockback Stick" enchantment="knockback:1" amount="1" price="10" currency="gold ingot" color="gold"/>
         </category>
 		<category id="armor" name="`aArmor" material="iron chestplate">
-			<item material="leather helmet" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
-			<item material="leather chestplate" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
-			<item material="leather leggings" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
-			<item material="leather boots" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot"/>
-			<item material="chainmail helmet" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
-			<item material="chainmail chestplate" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
-			<item material="chainmail leggings" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
-			<item material="chainmail boots" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot"/>
-			<item material="iron helmet" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
-			<item material="iron chestplate" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
-			<item material="iron leggings" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
-			<item material="iron boots" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond"/>
+			<item material="leather helmet" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot" />
+			<item material="leather chestplate" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot" />
+			<item material="leather leggings" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot" />
+			<item material="leather boots" team-color="true" unbreakable="false" amount="1" price="1" currency="iron ingot" />
+			<item material="chainmail helmet" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot" />
+			<item material="chainmail chestplate" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot" />
+			<item material="chainmail leggings" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot" />
+			<item material="chainmail boots" team-color="true" unbreakable="false" amount="1" price="10" currency="gold ingot" />
+			<item material="iron helmet" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond" color="aqua"/>
+			<item material="iron chestplate" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond" color="aqua"/>
+			<item material="iron leggings" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond" color="aqua"/>
+			<item material="iron boots" team-color="true" unbreakable="false" amount="1" price="5" currency="diamond" color="aqua"/>
         </category>
 		<category id="food" name="`aFood" material="rabbit stew">
-			<item material="carrot item" amount="1" price="1" currency="iron ingot"/>
-			<item material="cooked beef" amount="1" price="5" currency="iron ingot"/>
-			<item material="cake" amount="1" price="12" currency="iron ingot"/>
-			<item material="golden apple" amount="1" price="2" currency="gold ingot"/>
-			<item material="golden apple" amount="1" price="32" currency="diamond"/>
+			<item material="carrot item" amount="1" price="1" currency="iron ingot" color="white"/>
+			<item material="cooked beef" amount="1" price="5" currency="iron ingot" color="white"/>
+			<item material="cake" amount="1" price="12" currency="iron ingot" color="white"/>
+			<item material="golden apple" amount="1" price="2" currency="gold ingot" color="gold"/>
+			<item material="golden apple" amount="1" price="32" currency="diamond" color="aqua"/>
         </category>
         <category id="tools" name="`aTools" material="gold pickaxe">
             <!-- <item material="shears" name="`r`fPermanent Shears" lore="`7Great for getting rid of wool." unbreakable="true" price="20" currency="iron ingot" filter="not-shears" color="white"/> -->
             <item material="stone pickaxe" enchantment="efficiency:1" amount="1" price="10" currency="iron ingot" color="white"/>
-			<item material="iron pickaxe" enchantment="efficiency:1" amount="1" price="3" currency="gold ingot" color="white"/>
-			<item material="diamond pickaxe" enchantment="efficiency:1" amount="1" price="10" currency="gold ingot" color="white"/>
-			<item material="diamond pickaxe" enchantment="efficiency:3" amount="1" price="10" currency="diamond" color="white"/>
+			<item material="iron pickaxe" enchantment="efficiency:1" amount="1" price="3" currency="gold ingot" color="gold"/>
+			<item material="diamond pickaxe" enchantment="efficiency:1" amount="1" price="10" currency="gold ingot" color="gold"/>
+			<item material="diamond pickaxe" enchantment="efficiency:3" amount="1" price="10" currency="diamond" color="aqua"/>
         </category>
         <category id="ranged" name="`aRanged" material="bow">
-            <item material="arrow" amount="5" price="2" currency="gold ingot"/>
-			<item material="bow" amount="1" price="8" currency="diamond"/>
-			<item material="bow" amount="1" enchantment="punch:1" price="12" currency="diamond"/>
-			<item material="bow" amount="1" enchantment="power:1" price="15" currency="diamond"/>
+            <item material="arrow" amount="5" price="2" currency="gold ingot" color="gold"/>
+			<item material="bow" amount="1" price="8" currency="diamond" color="aqua"/>
+			<item material="bow" amount="1" enchantment="punch:1" price="12" currency="diamond" color="aqua"/>
+			<item material="bow" amount="1" enchantment="power:1" price="15" currency="diamond" color="aqua"/>
         </category>
         <category id="potions" name="`aPotions" material="brewing stand item">
 			<!-- TODO me dio pereza -->
@@ -347,11 +552,11 @@
             </item>
         </category>
         <category id="utilities" name="`aUtilities" material="tnt">
-			<item material="chest" amount="1" price="1" currency="gold ingot"/>
+			<item material="chest" amount="1" price="1" currency="gold ingot" color="gold"/>
 			<!-- Impossible to sell enderchest according to docs (https://pgm.dev/docs/modules/blocks/enderchests) as players cannot place ender chest under any circumstances. -->
 			<item material="fireball" name="`r`fFireball" lore="`7Right-click to launch! Great for|`7knocking off enemies walking on|`7thin bridges." price="40" currency="iron ingot" kit="fireball" color="white"/>
-            <item material="tnt" lore="`7Instantly ignites once placed." amount="1" price="5" currency="gold ingot"/>
-            <item material="ender pearl" lore="`7The quickest way to invade enemy bases." amount="1" price="10" currency="diamond" color="dark green"/>
+            <item material="tnt" lore="`7Instantly ignites once placed." amount="1" price="5" currency="gold ingot" color="gold"/>
+            <item material="ender pearl" lore="`7The quickest way to invade enemy bases." amount="1" price="10" currency="diamond" color="aqua"/>
             <!-- <item material="water bucket" lore="`7Great for slowing down approaching|`7enemies. Can also protect|`7against TNT." amount="1" price="6" currency="gold ingot"/> -->
             <!-- <item material="sponge" amount="4" price="6" currency="gold ingot"/> -->
         </category>
@@ -362,63 +567,557 @@
 			<item material="iron ingot" name="`7`lIron Spawner #2: II" price="20" currency="iron ingot" action="upg-team-generator-iron-2-lvl1" filter="generator-iron-2-lvl1" color="aqua"/>
 			<item material="iron ingot" name="`7`lIron Spawner #2: III" price="20" currency="gold ingot" action="upg-team-generator-iron-2-lvl2" filter="generator-iron-2-lvl2" color="aqua"/>
 			<item material="iron ingot" name="`7`lIron Spawner #2: IV" price="50" currency="gold ingot" action="upg-team-generator-iron-2-lvl3" filter="generator-iron-2-lvl3" color="aqua"/>
-			<item material="gold ingot" name="`8`lGold Spawner: II" price="20" currency="gold ingot" action="upg-team-generator-gold-1-lvl1" filter="generator-gold-1-lvl1" color="aqua"/>
-			<item material="gold ingot" name="`8`lGold Spawner: III" price="10" currency="diamond" action="upg-team-generator-gold-1-lvl2" filter="generator-gold-1-lvl2" color="aqua"/>
-			<item material="gold ingot" name="`8`lGold Spawner: IV" price="25" currency="diamond" action="upg-team-generator-gold-1-lvl3" filter="generator-gold-1-lvl3" color="aqua"/>
+			<item material="gold ingot" name="`6`lGold Spawner: II" price="20" currency="gold ingot" action="upg-team-generator-gold-1-lvl1" filter="generator-gold-1-lvl1" color="aqua"/>
+			<item material="gold ingot" name="`6`lGold Spawner: III" price="10" currency="diamond" action="upg-team-generator-gold-1-lvl2" filter="generator-gold-1-lvl2" color="aqua"/>
+			<item material="gold ingot" name="`6`lGold Spawner: IV" price="25" currency="diamond" action="upg-team-generator-gold-1-lvl3" filter="generator-gold-1-lvl3" color="aqua"/>
 			<item material="diamond" name="`b`lDiamond Spawner: I" price="5" currency="diamond" action="upg-team-generator-diamond-1-lvl0" filter="generator-diamond-1-lvl0" color="aqua"/>
 			<item material="diamond" name="`b`lDiamond Spawner: II" price="20" currency="diamond" action="upg-team-generator-diamond-1-lvl1" filter="generator-diamond-1-lvl1" color="aqua"/>
 			<item material="diamond" name="`b`lDiamond Spawner: III" price="10" currency="diamond" action="upg-team-generator-diamond-1-lvl2" filter="generator-diamond-1-lvl2" color="aqua"/>
-			<item material="diamond" name="`b`lDiamond Spawner: IV" price="25" currency="diamond" action="upg-team-generator-diamond-1-lvl3" filter="generator-diamond-1-lvl3" color="aqua"/>
         </category>
     </shop>
 </shops>
 <!-- ResourceSpawners -->
 <spawners player-region="everywhere">
-    <spawner spawn-region="team-orange-generator-iron-1" delay="1s" filter="team-orange-generator-iron-1-lv1">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-    <spawner spawn-region="team-orange-generator-iron-1" delay="0.75s" filter="team-orange-generator-iron-1-lv2">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-iron-1" delay="0.5s" filter="team-orange-generator-iron-1-lv3">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-iron-1" delay="0.25s" filter="team-orange-generator-iron-1-lv4">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-iron-2" delay="1s" filter="team-orange-generator-iron-2-lv1">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-    <spawner spawn-region="team-orange-generator-iron-2" delay="0.75s" filter="team-orange-generator-iron-2-lv2">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-iron-2" delay="0.5s" filter="team-orange-generator-iron-2-lv3">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-iron-2" delay="0.25s" filter="team-orange-generator-iron-2-lv4">
-        <item amount="1" material="iron ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-gold-1" delay="5s" filter="team-orange-generator-gold-1-lv1">
-        <item amount="1" material="gold ingot"/>
-    </spawner>
-    <spawner spawn-region="team-orange-generator-gold-1" delay="3.5s" filter="team-orange-generator-gold-1-lv2">
-        <item amount="1" material="gold ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-gold-1" delay="2s" filter="team-orange-generator-gold-1-lv3">
-        <item amount="1" material="gold ingot"/>
-    </spawner>
-	<spawner spawn-region="team-orange-generator-gold-1" delay="1s" filter="team-orange-generator-gold-1-lv4">
-        <item amount="1" material="gold ingot"/>
+	<spawner spawn-region="team-gray-generator-diamond-1" delay="10s" filter="team-gray-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-diamond-1" delay="5s" filter="team-gray-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-diamond-1" delay="2.5s" filter="team-gray-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-gold-1" delay="5s" filter="team-gray-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-gold-1" delay="3.5s" filter="team-gray-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-gold-1" delay="2s" filter="team-gray-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-gold-1" delay="1s" filter="team-gray-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-1" delay="1s" filter="team-gray-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-1" delay="0.75s" filter="team-gray-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-1" delay="0.5s" filter="team-gray-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-1" delay="0.25s" filter="team-gray-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-2" delay="1s" filter="team-gray-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-2" delay="0.75s" filter="team-gray-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-2" delay="0.5s" filter="team-gray-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-gray-generator-iron-2" delay="0.25s" filter="team-gray-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-diamond-1" delay="10s" filter="team-blue-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-diamond-1" delay="5s" filter="team-blue-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-diamond-1" delay="2.5s" filter="team-blue-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-gold-1" delay="5s" filter="team-blue-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-gold-1" delay="3.5s" filter="team-blue-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-gold-1" delay="2s" filter="team-blue-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-gold-1" delay="1s" filter="team-blue-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-1" delay="1s" filter="team-blue-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-1" delay="0.75s" filter="team-blue-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-1" delay="0.5s" filter="team-blue-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-1" delay="0.25s" filter="team-blue-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-2" delay="1s" filter="team-blue-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-2" delay="0.75s" filter="team-blue-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-2" delay="0.5s" filter="team-blue-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-blue-generator-iron-2" delay="0.25s" filter="team-blue-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-diamond-1" delay="10s" filter="team-cyan-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-diamond-1" delay="5s" filter="team-cyan-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-diamond-1" delay="2.5s" filter="team-cyan-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-gold-1" delay="5s" filter="team-cyan-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-gold-1" delay="3.5s" filter="team-cyan-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-gold-1" delay="2s" filter="team-cyan-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-gold-1" delay="1s" filter="team-cyan-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-1" delay="1s" filter="team-cyan-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-1" delay="0.75s" filter="team-cyan-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-1" delay="0.5s" filter="team-cyan-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-1" delay="0.25s" filter="team-cyan-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-2" delay="1s" filter="team-cyan-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-2" delay="0.75s" filter="team-cyan-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-2" delay="0.5s" filter="team-cyan-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-cyan-generator-iron-2" delay="0.25s" filter="team-cyan-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-diamond-1" delay="10s" filter="team-green-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-diamond-1" delay="5s" filter="team-green-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-diamond-1" delay="2.5s" filter="team-green-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-gold-1" delay="5s" filter="team-green-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-gold-1" delay="3.5s" filter="team-green-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-gold-1" delay="2s" filter="team-green-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-gold-1" delay="1s" filter="team-green-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-1" delay="1s" filter="team-green-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-1" delay="0.75s" filter="team-green-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-1" delay="0.5s" filter="team-green-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-1" delay="0.25s" filter="team-green-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-2" delay="1s" filter="team-green-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-2" delay="0.75s" filter="team-green-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-2" delay="0.5s" filter="team-green-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-green-generator-iron-2" delay="0.25s" filter="team-green-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-diamond-1" delay="10s" filter="team-lime-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-diamond-1" delay="5s" filter="team-lime-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-diamond-1" delay="2.5s" filter="team-lime-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-gold-1" delay="5s" filter="team-lime-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-gold-1" delay="3.5s" filter="team-lime-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-gold-1" delay="2s" filter="team-lime-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-gold-1" delay="1s" filter="team-lime-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-1" delay="1s" filter="team-lime-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-1" delay="0.75s" filter="team-lime-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-1" delay="0.5s" filter="team-lime-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-1" delay="0.25s" filter="team-lime-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-2" delay="1s" filter="team-lime-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-2" delay="0.75s" filter="team-lime-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-2" delay="0.5s" filter="team-lime-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-lime-generator-iron-2" delay="0.25s" filter="team-lime-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
 	</spawner>
 	<spawner spawn-region="team-orange-generator-diamond-1" delay="10s" filter="team-orange-generator-diamond-1-lv1">
-        <item amount="1" material="diamond"/>
-    </spawner>
-    <spawner spawn-region="team-orange-generator-diamond-1" delay="5s" filter="team-orange-generator-diamond-1-lv2">
-        <item amount="1" material="diamond"/>
-    </spawner>
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-diamond-1" delay="5s" filter="team-orange-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
 	<spawner spawn-region="team-orange-generator-diamond-1" delay="2.5s" filter="team-orange-generator-diamond-1-lv3">
-        <item amount="1" material="diamond"/>
-    </spawner>
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="5s" filter="team-orange-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="3.5s" filter="team-orange-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="2s" filter="team-orange-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-gold-1" delay="1s" filter="team-orange-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-1" delay="1s" filter="team-orange-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-1" delay="0.75s" filter="team-orange-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-1" delay="0.5s" filter="team-orange-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-1" delay="0.25s" filter="team-orange-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="1s" filter="team-orange-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="0.75s" filter="team-orange-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="0.5s" filter="team-orange-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-orange-generator-iron-2" delay="0.25s" filter="team-orange-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-diamond-1" delay="10s" filter="team-pink-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-diamond-1" delay="5s" filter="team-pink-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-diamond-1" delay="2.5s" filter="team-pink-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-gold-1" delay="5s" filter="team-pink-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-gold-1" delay="3.5s" filter="team-pink-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-gold-1" delay="2s" filter="team-pink-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-gold-1" delay="1s" filter="team-pink-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-1" delay="1s" filter="team-pink-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-1" delay="0.75s" filter="team-pink-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-1" delay="0.5s" filter="team-pink-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-1" delay="0.25s" filter="team-pink-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-2" delay="1s" filter="team-pink-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-2" delay="0.75s" filter="team-pink-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-2" delay="0.5s" filter="team-pink-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-pink-generator-iron-2" delay="0.25s" filter="team-pink-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-diamond-1" delay="10s" filter="team-purple-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-diamond-1" delay="5s" filter="team-purple-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-diamond-1" delay="2.5s" filter="team-purple-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-gold-1" delay="5s" filter="team-purple-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-gold-1" delay="3.5s" filter="team-purple-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-gold-1" delay="2s" filter="team-purple-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-gold-1" delay="1s" filter="team-purple-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-1" delay="1s" filter="team-purple-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-1" delay="0.75s" filter="team-purple-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-1" delay="0.5s" filter="team-purple-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-1" delay="0.25s" filter="team-purple-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-2" delay="1s" filter="team-purple-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-2" delay="0.75s" filter="team-purple-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-2" delay="0.5s" filter="team-purple-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-purple-generator-iron-2" delay="0.25s" filter="team-purple-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-diamond-1" delay="10s" filter="team-red-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-diamond-1" delay="5s" filter="team-red-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-diamond-1" delay="2.5s" filter="team-red-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-gold-1" delay="5s" filter="team-red-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-gold-1" delay="3.5s" filter="team-red-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-gold-1" delay="2s" filter="team-red-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-gold-1" delay="1s" filter="team-red-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-1" delay="1s" filter="team-red-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-1" delay="0.75s" filter="team-red-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-1" delay="0.5s" filter="team-red-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-1" delay="0.25s" filter="team-red-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-2" delay="1s" filter="team-red-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-2" delay="0.75s" filter="team-red-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-2" delay="0.5s" filter="team-red-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-red-generator-iron-2" delay="0.25s" filter="team-red-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-diamond-1" delay="10s" filter="team-silver-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-diamond-1" delay="5s" filter="team-silver-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-diamond-1" delay="2.5s" filter="team-silver-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-gold-1" delay="5s" filter="team-silver-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-gold-1" delay="3.5s" filter="team-silver-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-gold-1" delay="2s" filter="team-silver-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-gold-1" delay="1s" filter="team-silver-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-1" delay="1s" filter="team-silver-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-1" delay="0.75s" filter="team-silver-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-1" delay="0.5s" filter="team-silver-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-1" delay="0.25s" filter="team-silver-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-2" delay="1s" filter="team-silver-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-2" delay="0.75s" filter="team-silver-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-2" delay="0.5s" filter="team-silver-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-silver-generator-iron-2" delay="0.25s" filter="team-silver-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-diamond-1" delay="10s" filter="team-white-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-diamond-1" delay="5s" filter="team-white-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-diamond-1" delay="2.5s" filter="team-white-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-gold-1" delay="5s" filter="team-white-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-gold-1" delay="3.5s" filter="team-white-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-gold-1" delay="2s" filter="team-white-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-gold-1" delay="1s" filter="team-white-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-1" delay="1s" filter="team-white-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-1" delay="0.75s" filter="team-white-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-1" delay="0.5s" filter="team-white-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-1" delay="0.25s" filter="team-white-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-2" delay="1s" filter="team-white-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-2" delay="0.75s" filter="team-white-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-2" delay="0.5s" filter="team-white-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-white-generator-iron-2" delay="0.25s" filter="team-white-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-diamond-1" delay="10s" filter="team-yellow-generator-diamond-1-lv1">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-diamond-1" delay="5s" filter="team-yellow-generator-diamond-1-lv2">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-diamond-1" delay="2.5s" filter="team-yellow-generator-diamond-1-lv3">
+		<item amount="1" material="diamond"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-gold-1" delay="5s" filter="team-yellow-generator-gold-1-lv1">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-gold-1" delay="3.5s" filter="team-yellow-generator-gold-1-lv2">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-gold-1" delay="2s" filter="team-yellow-generator-gold-1-lv3">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-gold-1" delay="1s" filter="team-yellow-generator-gold-1-lv4">
+		<item amount="1" material="gold ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-1" delay="1s" filter="team-yellow-generator-iron-1-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-1" delay="0.75s" filter="team-yellow-generator-iron-1-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-1" delay="0.5s" filter="team-yellow-generator-iron-1-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-1" delay="0.25s" filter="team-yellow-generator-iron-1-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-2" delay="1s" filter="team-yellow-generator-iron-2-lv1">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-2" delay="0.75s" filter="team-yellow-generator-iron-2-lv2">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-2" delay="0.5s" filter="team-yellow-generator-iron-2-lv3">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
+	<spawner spawn-region="team-yellow-generator-iron-2" delay="0.25s" filter="team-yellow-generator-iron-2-lv4">
+		<item amount="1" material="iron ingot"/>
+	</spawner>
 </spawners>
 <projectiles>
     <projectile id="throwable-fireball" name="Fireball" projectile="Fireball" click="right" velocity="0.8" damage="4" cooldown="2s"/>
@@ -474,7 +1173,7 @@
 	<point id="team-lime-spawn">-104.5,63,32.5</point>
 	<point id="team-red-spawn">-79.5,63,77</point>
 	<point id="team-white-spawn">-40.5,63,101.5</point>
-	<point id="team-gray-spawn">-35.5,63,-92.5</point> <!-- Negro -->
+	<point id="team-gray-spawn">16.5,63,102.5</point> <!-- Negro -->
 	<point id="team-pink-spawn">61.5,63,78.5</point>
 	<point id="team-yellow-spawn">88.5,63,38.5</point>
 	<point id="team-green-spawn">88,63,-19</point>
@@ -544,10 +1243,10 @@
 		<point id="team-white-generator-gold-1">-45.5,64.0,111.5</point>
 		<point id="team-white-generator-diamond-1">-33.5,69.0,109.5</point>
 		<!-- Black generators locations -->
-		<point id="team-black-generator-iron-1">7.5,64.0,107.5</point>
-		<point id="team-black-generator-iron-2">18.5,64.0,107.5</point>
-		<point id="team-black-generator-gold-1">12.5,64.0,111.5</point>
-		<point id="team-black-generator-diamond-1">24.5,69.0,109.5</point>
+		<point id="team-gray-generator-iron-1">7.5,64.0,107.5</point>
+		<point id="team-gray-generator-iron-2">18.5,64.0,107.5</point>
+		<point id="team-gray-generator-gold-1">12.5,64.0,111.5</point>
+		<point id="team-gray-generator-diamond-1">24.5,69.0,109.5</point>
 		<!-- Pink generators locations -->
 		<point id="team-pink-generator-iron-1">67.5,64.0,88.5</point>
 		<point id="team-pink-generator-iron-2">67.5,64.0,77.5</point>
@@ -570,9 +1269,9 @@
     <destroyable name="§9Blue §9Egg" owner="team-blue" region="team-blue-egg" id="team-blue-egg-broken" scoreboard-filter="team-blue-scoreboard-filter"/>
 	<destroyable name="§5Purple §5Egg" owner="team-purple" region="team-purple-egg" id="team-purple-egg-broken" scoreboard-filter="team-purple-scoreboard-filter"/>
 	<destroyable name="§7Gray §7Egg" owner="team-silver" region="team-silver-egg" id="team-silver-egg-broken" scoreboard-filter="team-silver-scoreboard-filter"/>
-	<destroyable name="§7Orange §7Egg" owner="team-orange" region="team-orange-egg" id="team-orange-egg-broken" scoreboard-filter="team-orange-scoreboard-filter"/>
+	<destroyable name="§6Orange §6Egg" owner="team-orange" region="team-orange-egg" id="team-orange-egg-broken" scoreboard-filter="team-orange-scoreboard-filter"/>
 	<destroyable name="§3Cyan §3Egg" owner="team-cyan" region="team-cyan-egg" id="team-cyan-egg-broken" scoreboard-filter="team-cyan-scoreboard-filter"/>
-	<destroyable name="§aLime §3Egg" owner="team-lime" region="team-lime-egg" id="team-lime-egg-broken" scoreboard-filter="team-lime-scoreboard-filter"/>
+	<destroyable name="§aLime §aEgg" owner="team-lime" region="team-lime-egg" id="team-lime-egg-broken" scoreboard-filter="team-lime-scoreboard-filter"/>
 	<destroyable name="§cRed §cEgg" owner="team-red" region="team-red-egg" id="team-red-egg-broken" scoreboard-filter="team-red-scoreboard-filter"/>
 	<destroyable name="§fWhite §fEgg" owner="team-white" region="team-white-egg" id="team-white-egg-broken" scoreboard-filter="team-white-scoreboard-filter"/>
 	<destroyable name="§8Black §8Egg" owner="team-gray" region="team-gray-egg" id="team-gray-egg-broken" scoreboard-filter="team-gray-scoreboard-filter"/>
